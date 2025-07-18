@@ -7,19 +7,24 @@
       "type": "multiple-choice",
       "question": [
         {"type": "text", "value": "Which of these is a common fruit?"},
-        {"type": "image", "url": "images/apple.png", "alt": "Red apple icon"}
+        {"type": "image", "url": "images/apple.png", "alt": "Red apple icon", "width": "100px", "height": "auto"}
       ],
-      "choices": ["Carrot", {"text": "Apple", "imageUrl": "images/apple_small.png"}, "Broccoli", "Potato"],
+      "choices": [
+        "Carrot",
+        {"text": "Apple", "imageUrl": "images/apple_small.png", "width": "50px", "height": "50px"},
+        "Broccoli",
+        "Potato"
+      ],
       "answer": "Apple"
     },
     {
       "id": 2,
       "type": "number",
       "question": [
-        {"type": "text", "value": "What is the area of a circle with radius 5 cm?"},
-        {"type": "image", "url": "images/circle.png", "alt": "Diagram of a circle with radius 5cm"},
-        {"type": "text", "value": "Give your answer to 3 significant figures. Use the formula below."},
-        {"type": "image", "url": "images/formula.png", "alt": "Formula for area of a circle"}
+        {"type": "text", "value": "What is the area of a circle with radius 5 cm? Give your answer to 3 significant figures. See diagram for context."},
+        {"type": "image", "url": "images/circle.png", "alt": "Diagram of a circle with radius 5cm", "width": "70%", "height": "auto"},
+        {"type": "text", "value": "Use the formula below to help you."},
+        {"type": "image", "url": "images/formula.png", "alt": "Formula for area of a circle", "width": "200px", "height": "auto"}
       ],
       "units": ["cm²", "m²"],
       "sigFigs": 3,
