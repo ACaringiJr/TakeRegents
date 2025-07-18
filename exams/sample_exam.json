@@ -40,6 +40,7 @@
       "question": [
         {"type": "text", "value": "Which of the following is an example of a simple machine?"}
       ],
+      "choices": ["Computer", "Bicycle", "Lever", "Television"],
       "answer": "Lever"
     },
     {
