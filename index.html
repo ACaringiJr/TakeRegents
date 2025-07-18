@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Regents Exam Practice Quizzes</title>
+<title>Regents Exams</title>
 <style>
   body { font-family: Arial, sans-serif; margin: 20px; max-width: 900px; }
   .question { margin-bottom: 24px; }
@@ -43,31 +43,31 @@
 </head>
 <body>
 
-<h1 id="quizTitle">Regents Exam Practice Quizzes</h1>
+<h1 id="examTitle">Regents Exams</h1>
 
 <div>
-  <h2>Load a Quiz:</h2>
-  <label for="quizSelector">Select a Regents Exam:</label>
-  <select id="quizSelector"></select>
+  <h2>Load an Exam:</h2>
+  <label for="examSelector">Select a Regents Exam:</label>
+  <select id="examSelector"></select>
   <br><br>
   <div id="errorMessage"></div>
-  <button id="clearFormBtn" class="hidden">Clear Quiz</button>
+  <button id="clearFormBtn" class="hidden">Clear Exam</button>
   <button id="toggleGuidelinesBtn">Show Guidelines</button>
 </div>
 
 <div id="guidelines" class="hidden">
-  <h2>JSON Formatting Guidelines for Creating a Custom Quiz</h2>
-  <p>To add a new quiz, first place its JSON file (e.g., <code>my_new_quiz.json</code>) into the <code>quizzes/</code> folder. Then, edit the <code>quiz_manifest.json</code> file (in the same directory as <code>index.html</code>) to add an entry for your new quiz. Example:</p>
+  <h2>JSON Formatting Guidelines for Creating a Custom Exam</h2>
+  <p>To add a new exam, first place its JSON file (e.g., <code>my_new_exam.json</code>) into the <code>quizzes/</code> folder. Then, edit the <code>exam_manifest.json</code> file (in the same directory as <code>index.html</code>) to add an entry for your new exam. Example:</p>
   <pre><code>
 [
-  { "name": "Existing Quiz", "path": "quizzes/existing_quiz.json" },
-  { "name": "My New Quiz", "path": "quizzes/my_new_quiz.json" }
+  { "name": "Existing Exam", "path": "quizzes/existing_exam.json" },
+  { "name": "My New Exam", "path": "quizzes/my_new_exam.json" }
 ]
   </code></pre>
-  <p>The JSON structure for each quiz file should be as follows:</p>
+  <p>The JSON structure for each exam file should be as follows:</p>
   <h3>JSON Structure</h3>
   <ul>
-    <li><strong>title</strong> (string): The title of the quiz.</li>
+    <li><strong>title</strong> (string): The title of the exam.</li>
     <li><strong>showQuestionNumbers</strong> (boolean): Whether to display question numbers (true/false).</li>
     <li><strong>questions</strong> (array): List of question objects.</li>
   </ul>
@@ -91,10 +91,10 @@
       </ul>
     </li>
   </ul>
-  <h3>Example JSON (for a single quiz file, like `physics_june_2022.json`)</h3>
+  <h3>Example JSON (for a single exam file, like `physics_june_2022.json`)</h3>
   <pre><code>
 {
-  "title": "General Knowledge Quiz",
+  "title": "General Knowledge Exam",
   "showQuestionNumbers": true,
   "questions": [
     {
@@ -127,7 +127,7 @@
   <h3>Notes</h3>
   <ul>
     <li>Use LaTeX for mathematical expressions in <code>question</code>, <code>choices</code>, and <code>answer</code> (multiple-choice) fields.</li>
-    <li>Ensure <code>id</code> values are unique within the quiz.</li>
+    <li>Ensure <code>id</code> values are unique within the exam.</li>
     <li>For number questions, the answer's <code>unit</code> must match one of the provided <code>units</code> or be omitted if no units are specified.</li>
     <li>For number questions, answers can be entered in standard notation (e.g., <code>78.5</code>) or scientific notation (e.g., <code>7.85e1</code> or <code>7.85e+1</code>) using the text input field.</li>
     <li><code>sigFigs</code> enforces exactly the specified number of significant figures; omit for no significant figure enforcement.</li>
@@ -170,10 +170,10 @@
   const clearFormBtn = document.getElementById('clearFormBtn');
   const toggleGuidelinesBtn = document.getElementById('toggleGuidelinesBtn');
   const errorMessage = document.getElementById('errorMessage');
-  const quizSelector = document.getElementById('quizSelector');
+  const examSelector = document.getElementById('examSelector');
 
   let currentTest = null;
-  let availableQuizzes = []; // This will be populated from quiz_manifest.json
+  let availableExams = [];
 
   function clearForm() {
     testForm.innerHTML = '';
@@ -360,7 +360,7 @@
   function loadTest(testData) {
     clearForm();
     currentTest = testData;
-    document.getElementById('quizTitle').textContent = currentTest.title; 
+    document.getElementById('examTitle').textContent = currentTest.title; 
 
     const showNumber = !!testData.showQuestionNumbers;
 
@@ -495,7 +495,7 @@
     exportArea.classList.remove('hidden');
   }
 
-  async function loadQuizFromFile(filePath) {
+  async function loadExamFromFile(filePath) {
       errorMessage.style.display = 'none'; // Hide previous errors
       try {
           const response = await fetch(filePath);
@@ -507,55 +507,55 @@
           if (validationError) {
               errorMessage.textContent = `Error in "${filePath}": ${validationError}`;
               errorMessage.style.display = 'block';
-              // If validation fails, attempt to reset selector to currently loaded quiz
-              const currentQuizPath = currentTest ? availableQuizzes.find(q => q.name === currentTest.title)?.path : '';
-              quizSelector.value = currentQuizPath || (availableQuizzes.length > 0 ? availableQuizzes[0].path : '');
+              // If validation fails, attempt to reset selector to currently loaded exam
+              const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
+              examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
               return;
           }
-          if (hasAnswers() && !confirm('Loading a new quiz will clear your current answers. Continue?')) {
-              // If user cancels, reset selector to previously loaded quiz
-              const currentQuizPath = currentTest ? availableQuizzes.find(q => q.name === currentTest.title)?.path : '';
-              quizSelector.value = currentQuizPath || (availableQuizzes.length > 0 ? availableQuizzes[0].path : '');
+          if (hasAnswers() && !confirm('Loading a new exam will clear your current answers. Continue?')) {
+              // If user cancels, reset selector to previously loaded exam
+              const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
+              examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
               return;
           }
           loadTest(testData);
       } catch (e) {
-          errorMessage.textContent = `Failed to load quiz from ${filePath}: ${e.message}`;
+          errorMessage.textContent = `Failed to load exam from ${filePath}: ${e.message}`;
           errorMessage.style.display = 'block';
-          // On error, reset the selector to the currently loaded quiz
-          const currentQuizPath = currentTest ? availableQuizzes.find(q => q.name === currentTest.title)?.path : '';
-          quizSelector.value = currentQuizPath || (availableQuizzes.length > 0 ? availableQuizzes[0].path : '');
+          // On error, reset the selector to the currently loaded exam
+          const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
+          examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
       }
   }
 
-  // Function to initialize quizzes from manifest
-  async function initializeQuizzes() {
+  // Function to initialize exams from manifest
+  async function initializeExams() {
     try {
-      const response = await fetch('quiz_manifest.json');
+      const response = await fetch('exam_manifest.json');
       if (!response.ok) {
-        throw new Error(`Failed to load quiz manifest: ${response.status}`);
+        throw new Error(`Failed to load exam manifest: ${response.status}`);
       }
-      availableQuizzes = await response.json();
+      availableExams = await response.json();
 
-      // Populate the quiz selector dropdown
-      quizSelector.innerHTML = ''; // Clear existing options
-      availableQuizzes.forEach(quiz => {
+      // Populate the exam selector dropdown
+      examSelector.innerHTML = ''; // Clear existing options
+      availableExams.forEach(exam => {
         const option = document.createElement('option');
-        option.value = quiz.path;
-        option.textContent = quiz.name;
-        quizSelector.appendChild(option);
+        option.value = exam.path;
+        option.textContent = exam.name;
+        examSelector.appendChild(option);
       });
 
-      // Load the first quiz in the list by default
-      if (availableQuizzes.length > 0) {
-        quizSelector.value = availableQuizzes[0].path;
-        loadQuizFromFile(availableQuizzes[0].path);
+      // Load the first exam in the list by default
+      if (availableExams.length > 0) {
+        examSelector.value = availableExams[0].path;
+        loadExamFromFile(availableExams[0].path);
       } else {
-        errorMessage.textContent = 'No quizzes found in quiz_manifest.json. Please add some quiz entries.';
+        errorMessage.textContent = 'No exams found in exam_manifest.json. Please add some exam entries.';
         errorMessage.style.display = 'block';
       }
     } catch (e) {
-      errorMessage.textContent = `Error initializing quizzes: ${e.message}. Make sure quiz_manifest.json exists and is valid.`;
+      errorMessage.textContent = `Error initializing exams: ${e.message}. Make sure exam_manifest.json exists and is valid.`;
       errorMessage.style.display = 'block';
       console.error(e);
     }
@@ -563,30 +563,30 @@
 
 
   window.addEventListener('load', () => {
-    initializeQuizzes(); // Call the new initialization function
+    initializeExams();
 
     setTimeout(() => {
       renderMathInElementSafe(document.getElementById('guidelines'));
     }, 0);
   });
 
-  // Event listener for quiz selector change
-  quizSelector.addEventListener('change', (event) => {
+  // Event listener for exam selector change
+  examSelector.addEventListener('change', (event) => {
       const selectedFilePath = event.target.value;
       if (selectedFilePath) {
-          loadQuizFromFile(selectedFilePath);
+          loadExamFromFile(selectedFilePath);
       }
   });
 
   clearFormBtn.addEventListener('click', () => {
-    if (hasAnswers() && !confirm('Clearing the quiz will reset all answers. Continue?')) {
+    if (hasAnswers() && !confirm('Clearing the exam will reset all answers. Continue?')) {
       return;
     }
     clearForm();
-    // After clearing, reload the initially loaded quiz
-    if (availableQuizzes.length > 0) {
-        quizSelector.value = availableQuizzes[0].path;
-        loadQuizFromFile(availableQuizzes[0].path);
+    // After clearing, reload the initially loaded exam
+    if (availableExams.length > 0) {
+        examSelector.value = availableExams[0].path;
+        loadExamFromFile(availableExams[0].path);
     }
   });
 
