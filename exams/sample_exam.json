@@ -5,16 +5,22 @@
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "Which of these is a common fruit?",
-      "questionImageUrl": "images/apple.png",
-      "questionImageAlt": "Red apple icon",
+      "question": [
+        {"type": "text", "value": "Which of these is a common fruit?"},
+        {"type": "image", "url": "images/apple.png", "alt": "Red apple icon"}
+      ],
       "choices": ["Carrot", {"text": "Apple", "imageUrl": "images/apple_small.png"}, "Broccoli", "Potato"],
       "answer": "Apple"
     },
     {
       "id": 2,
       "type": "number",
-      "question": "What is the area of a circle with radius 5 cm? Give your answer to 3 significant figures.",
+      "question": [
+        {"type": "text", "value": "What is the area of a circle with radius 5 cm?"},
+        {"type": "image", "url": "images/circle.png", "alt": "Diagram of a circle with radius 5cm"},
+        {"type": "text", "value": "Give your answer to 3 significant figures. Use the formula below."},
+        {"type": "image", "url": "images/formula.png", "alt": "Formula for area of a circle"}
+      ],
       "units": ["cm²", "m²"],
       "sigFigs": 3,
       "tolerance": 0.001,
@@ -23,20 +29,25 @@
     {
       "id": 3,
       "type": "short-answer",
-      "question": "What is the capital of France?",
+      "question": [
+        {"type": "text", "value": "What is the capital of France?"}
+      ],
       "answer": "Paris"
     },
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Which of the following is an example of a simple machine?",
-      "choices": ["Computer", "Bicycle", "Lever", "Television"],
+      "question": [
+        {"type": "text", "value": "Which of the following is an example of a simple machine?"}
+      ],
       "answer": "Lever"
     },
     {
       "id": 5,
       "type": "number",
-      "question": "If a car travels 100 km in 2 hours, what is its average speed in km/h?",
+      "question": [
+        {"type": "text", "value": "If a car travels 100 km in 2 hours, what is its average speed in km/h?"}
+      ],
       "units": ["km/h", "m/s"],
       "sigFigs": 2,
       "tolerance": 0,
