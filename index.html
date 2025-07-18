@@ -18,10 +18,6 @@
   #results .yellow { color: #d4a017; }
   #exportArea { width: 100%; height: 150px; margin-top: 20px; font-family: monospace; }
   .hidden { display: none; }
-  #guidelines { margin-top: 30px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; }
-  #guidelines h2 { margin-top: 0; }
-  #guidelines pre { background-color: #fff; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; }
-  #guidelines code { font-family: monospace; }
   #errorMessage { color: red; margin-top: 10px; display: none; }
 
   /* Specific styles for images in questions and choices */
@@ -52,89 +48,6 @@
   <br><br>
   <div id="errorMessage"></div>
   <button id="clearFormBtn" class="hidden">Clear Exam</button>
-  <button id="toggleGuidelinesBtn">Show Guidelines</button>
-</div>
-
-<div id="guidelines" class="hidden">
-  <h2>JSON Formatting Guidelines for Creating a Custom Exam</h2>
-  <p>To add a new exam, first place its JSON file (e.g., <code>my_new_exam.json</code>) into the <code>exams/</code> folder. Then, edit the <code>exam_manifest.json</code> file (in the same directory as <code>index.html</code>) to add an entry for your new exam. Example:</p>
-  <pre><code>
-[
-  { "name": "Existing Exam", "path": "exams/existing_exam.json" },
-  { "name": "My New Exam", "path": "exams/my_new_exam.json" }
-]
-  </code></pre>
-  <p>The JSON structure for each exam file should be as follows:</p>
-  <h3>JSON Structure</h3>
-  <ul>
-    <li><strong>title</strong> (string): The title of the exam.</li>
-    <li><strong>showQuestionNumbers</strong> (boolean): Whether to display question numbers (true/false).</li>
-    <li><strong>questions</strong> (array): List of question objects.</li>
-  </ul>
-  <h3>Question Object</h3>
-  <p>Each question object must include:</p>
-  <ul>
-    <li><strong>id</strong> (number): Unique identifier for the question.</li>
-    <li><strong>type</strong> (string): Either <code>"multiple-choice"</code>, <code>"number"</code>, or <code>"short-answer"</code>.</li>
-    <li><strong>question</strong> (string): The question text. Use LaTeX for math (e.g., <code>$x^2$</code>).</li>
-    <li><strong>questionImageUrl</strong> (string, optional): Path to an image for the question (e.g., <code>"images/my_image.png"</code>).</li>
-    <li><strong>questionImageAlt</strong> (string, optional): Alt text for the <code>questionImageUrl</code>.</li>
-    <li><strong>choices</strong> (array, for multiple-choice only): Array of answer options. Each option can be a string, or an object with <code>"text"</code> (string) and <code>"imageUrl"</code> (string, optional, e.g., <code>{"text": "Option A", "imageUrl": "images/option_a.png"}</code>). Use LaTeX for math.</li>
-    <li><strong>units</strong> (array, for number type only): Array of valid unit strings (e.g., <code>["m/s", "km/h"]</code>). Optional.</li>
-    <li><strong>sigFigs</strong> (number, for number type only): Number of significant figures for answer comparison (e.g., 2). Optional; if omitted, exact value is used.</li>
-    <li><strong>tolerance</strong> (number, for number type only): Absolute tolerance range for answer comparison (e.g., 0.5 for ±0.5 units, 0 for exact match). Optional; defaults to 0.001.</li>
-    <li><strong>answer</strong>: The correct answer.
-      <ul>
-        <li>For multiple-choice: A string matching the <code>text</code> of one of the choices (e.g., <code>"$x=2$"</code>).</li>
-        <li>For number: An object with <code>value</code> (number) and <code>unit</code> (string, e.g., <code>{"value": 10, "unit": "m/s"}</code>).</li>
-        <li>For short-answer: A string (e.g., <code>"Paris"</code>). Compared case-insensitively.</li>
-      </ul>
-    </li>
-  </ul>
-  <h3>Example JSON (for a single exam file, like `physics_june_2022.json`)</h3>
-  <pre><code>
-{
-  "title": "General Knowledge Exam",
-  "showQuestionNumbers": true,
-  "questions": [
-    {
-      "id": 1,
-      "type": "multiple-choice",
-      "question": "Which of these is a common fruit?",
-      "questionImageUrl": "images/apple.png",
-      "questionImageAlt": "Red apple icon",
-      "choices": ["Carrot", {"text": "Apple", "imageUrl": "images/apple_small.png"}, "Broccoli", "Potato"],
-      "answer": "Apple"
-    },
-    {
-      "id": 2,
-      "type": "number",
-      "question": "What is the area of a circle with radius 5 cm? Give your answer to 3 significant figures.",
-      "units": ["cm²", "m²"],
-      "sigFigs": 3,
-      "tolerance": 0,
-      "answer": {"value": 78.539816, "unit": "cm²"}
-    },
-    {
-      "id": 3,
-      "type": "short-answer",
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    }
-  ]
-}
-  </code></pre>
-  <h3>Notes</h3>
-  <ul>
-    <li>Use LaTeX for mathematical expressions in <code>question</code>, <code>choices</code>, and <code>answer</code> (multiple-choice) fields.</li>
-    <li>Ensure <code>id</code> values are unique within the exam.</li>
-    <li>For number questions, the answer's <code>unit</code> must match one of the provided <code>units</code> or be omitted if no units are specified.</li>
-    <li>For number questions, answers can be entered in standard notation (e.g., <code>78.5</code>) or scientific notation (e.g., <code>7.85e1</code> or <code>7.85e+1</code>) using the text input field.</li>
-    <li><code>sigFigs</code> enforces exactly the specified number of significant figures; omit for no significant figure enforcement.</li>
-    <li><code>tolerance</code> specifies an absolute range (e.g., 0.5 for ±0.5 units, 0 for exact match).</li>
-    <li>For short-answer questions, answers are compared case-insensitively after trimming whitespace.</li>
-    <li>Invalid JSON or missing required fields will display an error message.</li>
-  </ul>
 </div>
 
 <form id="testForm"></form>
@@ -168,7 +81,6 @@
   const submitBtn = document.getElementById('submitBtn');
   const exportBtn = document.getElementById('exportBtn');
   const clearFormBtn = document.getElementById('clearFormBtn');
-  const toggleGuidelinesBtn = document.getElementById('toggleGuidelinesBtn');
   const errorMessage = document.getElementById('errorMessage');
   const examSelector = document.getElementById('examSelector');
 
@@ -564,10 +476,6 @@
 
   window.addEventListener('load', () => {
     initializeExams();
-
-    setTimeout(() => {
-      renderMathInElementSafe(document.getElementById('guidelines'));
-    }, 0);
   });
 
   // Event listener for exam selector change
@@ -587,18 +495,6 @@
     if (availableExams.length > 0) {
         examSelector.value = availableExams[0].path;
         loadExamFromFile(availableExams[0].path);
-    }
-  });
-
-  toggleGuidelinesBtn.addEventListener('click', () => {
-    const guidelines = document.getElementById('guidelines');
-    const isHidden = guidelines.classList.contains('hidden');
-    guidelines.classList.toggle('hidden');
-    toggleGuidelinesBtn.textContent = isHidden ? 'Hide Guidelines' : 'Show Guidelines';
-    if (!isHidden) {
-      setTimeout(() => {
-        renderMathInElementSafe(guidelines);
-      }, 0);
     }
   });
 
