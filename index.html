@@ -23,19 +23,20 @@
   /* Specific styles for images in questions and choices */
   .question-content-item { margin-bottom: 10px; } /* Spacing between text/image blocks */
   .question-image {
-      max-width: 100%;
-      height: auto;
+      max-width: 100%; /* Ensures images don't overflow their container */
+      height: auto; /* Maintain aspect ratio by default */
       display: block;
       margin: 10px 0;
   }
   .choice-image {
-      max-width: 80px;
-      height: auto;
+      /* Removed max-width to allow explicit sizing from JSON */
+      height: auto; /* Maintain aspect ratio by default */
       margin-left: 10px;
       border: 1px solid #eee;
       border-radius: 3px;
   }
 </style>
+<!-- KaTeX CSS for math rendering -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" crossorigin="anonymous" />
 </head>
 <body>
@@ -59,6 +60,7 @@
 <div id="results"></div>
 <textarea id="exportArea" class="hidden" readonly></textarea>
 
+<!-- KaTeX JS for rendering math -->
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 
@@ -147,11 +149,14 @@
                 questionImage.src = block.url;
                 questionImage.alt = block.alt || '';
                 questionImage.classList.add('question-image');
+                // Apply width and height if provided
+                if (block.width) questionImage.style.width = block.width;
+                if (block.height) questionImage.style.height = block.height;
                 contentDiv.appendChild(questionImage);
             }
             container.appendChild(contentDiv);
         });
-    } else { // Fallback for old string format questions, if any
+    } else { // Fallback for old string format questions, if any (shouldn't happen with validation)
         const textSpan = document.createElement('span');
         textSpan.classList.add('question-text');
         textSpan.style.whiteSpace = 'pre-wrap';
@@ -196,6 +201,9 @@
             choiceImage.src = choice.imageUrl;
             choiceImage.alt = `Choice ${String.fromCharCode(65 + i)} image`;
             choiceImage.classList.add('choice-image');
+            // Apply width and height if provided for choice images
+            if (choice.width) choiceImage.style.width = choice.width;
+            if (choice.height) choiceImage.style.height = choice.height;
             label.appendChild(choiceImage);
         }
 
@@ -268,6 +276,8 @@
           } else if (block.type === 'image') {
               if (typeof block.url !== 'string' || block.url === '') return `Question ${i+1}, content block ${j+1}: 'image' block must have a non-empty 'url' string.`;
               if (block.alt !== undefined && typeof block.alt !== 'string') return `Question ${i+1}, content block ${j+1}: 'alt' must be a string if provided in image block.`;
+              if (block.width !== undefined && typeof block.width !== 'string') return `Question ${i+1}, content block ${j+1}: 'width' must be a string (e.g., '100px', '50%') if provided in image block.`;
+              if (block.height !== undefined && typeof block.height !== 'string') return `Question ${i+1}, content block ${j+1}: 'height' must be a string (e.g., '100px', 'auto') if provided in image block.`;
           } else {
               return `Question ${i+1}, content block ${j+1}: Invalid block type '${block.type}'. Must be 'text' or 'image'.`;
           }
@@ -280,6 +290,8 @@
             if (typeof choice === 'object' && choice !== null) {
                 if (typeof choice.text !== 'string') return `Question ${i+1}, Choice ${j+1}: Missing or invalid 'text' in choice object.`;
                 if (choice.imageUrl !== undefined && typeof choice.imageUrl !== 'string') return `Question ${i+1}, Choice ${j+1}: 'imageUrl' must be a string if provided in choice object.`;
+                if (choice.width !== undefined && typeof choice.width !== 'string') return `Question ${i+1}, Choice ${j+1}: 'width' must be a string (e.g., '50px', 'auto') if provided in choice object.`;
+                if (choice.height !== undefined && typeof choice.height !== 'string') return `Question ${i+1}, Choice ${j+1}: 'height' must be a string (e.g., '50px', 'auto') if provided in choice object.`;
             } else if (typeof choice !== 'string') {
                 return `Question ${i+1}, Choice ${j+1}: Choice must be a string or an object with 'text' property.`;
             }
