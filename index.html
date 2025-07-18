@@ -57,11 +57,11 @@
 
 <div id="guidelines" class="hidden">
   <h2>JSON Formatting Guidelines for Creating a Custom Exam</h2>
-  <p>To add a new exam, first place its JSON file (e.g., <code>my_new_exam.json</code>) into the <code>quizzes/</code> folder. Then, edit the <code>exam_manifest.json</code> file (in the same directory as <code>index.html</code>) to add an entry for your new exam. Example:</p>
+  <p>To add a new exam, first place its JSON file (e.g., <code>my_new_exam.json</code>) into the <code>exams/</code> folder. Then, edit the <code>exam_manifest.json</code> file (in the same directory as <code>index.html</code>) to add an entry for your new exam. Example:</p>
   <pre><code>
 [
-  { "name": "Existing Exam", "path": "quizzes/existing_exam.json" },
-  { "name": "My New Exam", "path": "quizzes/my_new_exam.json" }
+  { "name": "Existing Exam", "path": "exams/existing_exam.json" },
+  { "name": "My New Exam", "path": "exams/my_new_exam.json" }
 ]
   </code></pre>
   <p>The JSON structure for each exam file should be as follows:</p>
