@@ -1,1 +1,3 @@
-
+[
+  { "name": "Sample Exam (Default)", "path": "exams/sample_exam.json" }
+]
