@@ -21,6 +21,7 @@
   #errorMessage { color: red; margin-top: 10px; display: none; }
 
   /* Specific styles for images in questions and choices */
+  .question-content-item { margin-bottom: 10px; } /* Spacing between text/image blocks */
   .question-image {
       max-width: 100%;
       height: auto;
@@ -127,17 +128,38 @@
     container.className = 'question';
 
     const questionHeader = document.createElement('h3');
-    questionHeader.className = 'question-text';
-    questionHeader.style.whiteSpace = 'pre-wrap';
-    questionHeader.innerHTML = (showNumber ? (index + 1) + '. ' : '') + q.question;
+    questionHeader.innerHTML = (showNumber ? (index + 1) + '. ' : '');
     container.appendChild(questionHeader);
 
-    if (q.questionImageUrl) {
-        const questionImage = document.createElement('img');
-        questionImage.src = q.questionImageUrl;
-        questionImage.alt = q.questionImageAlt || '';
-        questionImage.classList.add('question-image');
-        container.appendChild(questionImage);
+    // Handle question content as an array of text and image blocks
+    if (Array.isArray(q.question)) {
+        q.question.forEach(block => {
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('question-content-item');
+            if (block.type === 'text') {
+                const textSpan = document.createElement('span');
+                textSpan.classList.add('question-text');
+                textSpan.style.whiteSpace = 'pre-wrap';
+                textSpan.innerHTML = block.value;
+                contentDiv.appendChild(textSpan);
+            } else if (block.type === 'image') {
+                const questionImage = document.createElement('img');
+                questionImage.src = block.url;
+                questionImage.alt = block.alt || '';
+                questionImage.classList.add('question-image');
+                contentDiv.appendChild(questionImage);
+            }
+            container.appendChild(contentDiv);
+        });
+    } else { // Fallback for old string format questions, if any
+        const textSpan = document.createElement('span');
+        textSpan.classList.add('question-text');
+        textSpan.style.whiteSpace = 'pre-wrap';
+        textSpan.innerHTML = q.question;
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('question-content-item');
+        contentDiv.appendChild(textSpan);
+        container.appendChild(contentDiv);
     }
 
     if (q.type === 'multiple-choice') {
@@ -235,11 +257,21 @@
       const q = testData.questions[i];
       if (!q.id || typeof q.id !== 'number') return `Question ${i+1}: Missing or invalid 'id' field.`;
       if (!['multiple-choice', 'number', 'short-answer'].includes(q.type)) return `Question ${i+1}: Invalid 'type' field. Must be 'multiple-choice', 'number', or 'short-answer'.`;
-      if (!q.question || typeof q.question !== 'string') return `Question ${i+1}: Missing or invalid 'question' field.`;
       
-      if (q.questionImageUrl !== undefined && typeof q.questionImageUrl !== 'string') return `Question ${i+1}: 'questionImageUrl' must be a string if provided.`;
-      if (q.questionImageAlt !== undefined && typeof q.questionImageAlt !== 'string') return `Question ${i+1}: 'questionImageAlt' must be a string if provided.`;
-
+      // Validation for new 'question' array structure
+      if (!Array.isArray(q.question) || q.question.length === 0) return `Question ${i+1}: Missing or empty 'question' array.`;
+      for (let j = 0; j < q.question.length; j++) {
+          const block = q.question[j];
+          if (typeof block !== 'object' || block === null || !block.type) return `Question ${i+1}, content block ${j+1}: Invalid content block structure.`;
+          if (block.type === 'text') {
+              if (typeof block.value !== 'string' || block.value === '') return `Question ${i+1}, content block ${j+1}: 'text' block must have a non-empty 'value' string.`;
+          } else if (block.type === 'image') {
+              if (typeof block.url !== 'string' || block.url === '') return `Question ${i+1}, content block ${j+1}: 'image' block must have a non-empty 'url' string.`;
+              if (block.alt !== undefined && typeof block.alt !== 'string') return `Question ${i+1}, content block ${j+1}: 'alt' must be a string if provided in image block.`;
+          } else {
+              return `Question ${i+1}, content block ${j+1}: Invalid block type '${block.type}'. Must be 'text' or 'image'.`;
+          }
+      }
 
       if (q.type === 'multiple-choice') {
         if (!Array.isArray(q.choices) || q.choices.length === 0) return `Question ${i+1}: Missing or empty 'choices' array.`;
