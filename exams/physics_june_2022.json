@@ -117,7 +117,8 @@
         {
           "type": "image",
           "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-5-q.png",
-          "alt": "Question 5 image"
+          "alt": "Question 5 image",
+          "height": "30%"
         }
       ],
       "choices": [
