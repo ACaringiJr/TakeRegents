@@ -1884,7 +1884,10 @@
           "value": "84 Starting at point O and using a protractor and ruler, draw the refracted ray at the appropriate angle of refraction on the diagram in your answer booklet."
         }
       ],
-      "answer": "Refracted ray at 43° ± 2° to the normal",
+      "answer": {
+        "text": "Refracted ray at 43° ± 2° to the normal",
+        "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-84-a.png"
+      },
       "points": 1
     },
     {
