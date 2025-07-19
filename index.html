@@ -441,7 +441,8 @@
       }
 
       const resultLine = document.createElement('div');
-      let resultText = `Q${i + 1}: ${correct ? 'Correct' : 'Incorrect'} (Your answer: ${yourAnswerStr}`;
+      // Changed from i + 1 to q.id to match JSON IDs
+      let resultText = `Q${q.id}: ${correct ? 'Correct' : 'Incorrect'} (Your answer: ${yourAnswerStr}`;
       if (showCorrectAnswers) {
         resultText += `, Correct: ${correctAnswerDisplayStr}`;
       }
@@ -453,7 +454,7 @@
       if (showCorrectAnswers && correctAnswerImageUrl) {
         const answerImage = document.createElement('img');
         answerImage.src = correctAnswerImageUrl;
-        answerImage.alt = `Correct answer for Q${i + 1}`;
+        answerImage.alt = `Correct answer for Q${q.id}`;
         answerImage.classList.add('answer-image'); // Apply the new CSS class
         resultLine.appendChild(answerImage);
       }
