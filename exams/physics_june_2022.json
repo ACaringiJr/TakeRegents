@@ -447,7 +447,7 @@
           "text": "(4) A, B, and C"
         }
       ],
-      "answer": "(3) B and C, only",
+      "answer": "(2) A and C, only",
       "points": 1
     },
     {
@@ -473,7 +473,7 @@
           "text": "(4) Distance d was increased by a factor of nine."
         }
       ],
-      "answer": "(4) Distance d was increased by a factor of nine.",
+      "answer": "(3) Distance d was increased by a factor of three.",
       "points": 1
     },
     {
