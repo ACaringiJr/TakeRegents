@@ -5,41 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Regents Exams</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 900px; /* Limits the overall width of the content */
-    margin: 20px auto; /* Sets 20px top/bottom margin and centers horizontally */
-    padding: 0 10px; /* Adds a small horizontal padding for spacing on smaller screens */
-    box-sizing: border-box; /* Ensures padding is included in the max-width calculation */
-  }
-  .question { margin-bottom: 24px; }
-  .question h3 { margin-bottom: 8px; }
-  .choices label { display: block; margin: 4px 0; cursor: pointer; display: flex; align-items: center; }
-  input[type="text"] { width: 200px; padding: 4px; margin-right: 10px; }
-  select.unit-select { padding: 4px; }
-  button { margin: 10px 10px 10px 0; padding: 10px 15px; font-size: 16px; cursor: pointer; }
-  #results { margin-top: 30px; font-weight: bold; white-space: pre-wrap; }
-  #results .correct { color: green; }
-  #results .incorrect { color: red; }
-  #results .yellow { color: #d4a017; }
-  .hidden { display: none; }
-  #errorMessage { color: red; margin-top: 10px; display: none; }
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 900px; /* Limits the overall width of the content */
+        margin: 20px auto; /* Sets 20px top/bottom margin and centers horizontally */
+        padding: 0 10px; /* Adds a small horizontal padding for spacing on smaller screens */
+        box-sizing: border-box; /* Ensures padding is included in the max-width calculation */
+    }
+    .question { margin-bottom: 24px; }
+    .question h3 { margin-bottom: 8px; }
+    .choices label { display: block; margin: 4px 0; cursor: pointer; display: flex; align-items: center; }
+    input[type="text"] { width: 200px; padding: 4px; margin-right: 10px; }
+    select.unit-select { padding: 4px; }
+    button { margin: 10px 10px 10px 0; padding: 10px 15px; font-size: 16px; cursor: pointer; }
+    #results { margin-top: 30px; font-weight: bold; white-space: pre-wrap; }
+    #results .correct { color: green; }
+    #results .incorrect { color: red; }
+    #results .yellow { color: #d4a017; }
+    .hidden { display: none; }
+    #errorMessage { color: red; margin-top: 10px; display: none; }
 
-  /* Specific styles for images in questions and choices */
-  .question-content-item { margin-bottom: 10px; } /* Spacing between text/image blocks */
-  .question-image {
-      max-width: 100%; /* Ensures images don't overflow their container */
-      height: auto; /* Maintain aspect ratio by default */
-      display: block;
-      margin: 10px 0;
-  }
-  .choice-image {
-      /* Removed max-width to allow explicit sizing from JSON */
-      height: auto; /* Maintain aspect ratio by default */
-      margin-left: 10px;
-      border: 1px solid #eee;
-      border-radius: 3px;
-  }
+    /* Specific styles for images in questions and choices */
+    .question-content-item { margin-bottom: 10px; } /* Spacing between text/image blocks */
+    .question-image {
+        max-width: 100%; /* Ensures images don't overflow their container */
+        height: auto; /* Maintain aspect ratio by default */
+        display: block;
+        margin: 10px 0;
+    }
+    .choice-image {
+        /* Removed max-width to allow explicit sizing from JSON */
+        height: auto; /* Maintain aspect ratio by default */
+        margin-left: 10px;
+        border: 1px solid #eee;
+        border-radius: 3px;
+    }
+    /* NEW: Style for correct answer images in results */
+    .answer-image {
+        max-width: 200px; /* Adjust size as needed */
+        height: auto;
+        margin-left: 10px;
+        vertical-align: middle; /* Align image with text */
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" crossorigin="anonymous" />
 </head>
@@ -48,12 +57,12 @@
 <h1 id="examTitle">Regents Exams</h1>
 
 <div>
-  <h2>Load an Exam:</h2>
-  <label for="examSelector">Select a Regents Exam:</label>
-  <select id="examSelector"></select>
-  <br><br>
-  <div id="errorMessage"></div>
-  <button id="clearFormBtn" class="hidden">Clear Exam</button>
+    <h2>Load an Exam:</h2>
+    <label for="examSelector">Select a Regents Exam:</label>
+    <select id="examSelector"></select>
+    <br><br>
+    <div id="errorMessage"></div>
+    <button id="clearFormBtn" class="hidden">Clear Exam</button>
 </div>
 
 <form id="testForm"></form>
@@ -67,205 +76,205 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 
 <script>
-  // Render KaTeX in a container, supporting inline math inside text
-  function renderMathInElementSafe(element) {
-    renderMathInElement(element, {
-      delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false},
-        {left: "\\(", right: "\\)", display: false},
-        {left: "\\[", right: "\\]", display: true}
-      ],
-      throwOnError: false
-    });
-  }
+  // Render KaTeX in a container, supporting inline math inside text
+  function renderMathInElementSafe(element) {
+    renderMathInElement(element, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ],
+      throwOnError: false
+    });
+  }
 
-  const testForm = document.getElementById('testForm');
-  const resultsDiv = document.getElementById('results');
-  const checkAnswersBtn = document.getElementById('checkAnswersBtn');
-  const showAnswersBtn = document.getElementById('showAnswersBtn');
-  const clearFormBtn = document.getElementById('clearFormBtn');
-  const errorMessage = document.getElementById('errorMessage');
-  const examSelector = document.getElementById('examSelector');
+  const testForm = document.getElementById('testForm');
+  const resultsDiv = document.getElementById('results');
+  const checkAnswersBtn = document.getElementById('checkAnswersBtn');
+  const showAnswersBtn = document.getElementById('showAnswersBtn');
+  const clearFormBtn = document.getElementById('clearFormBtn');
+  const errorMessage = document.getElementById('errorMessage');
+  const examSelector = document.getElementById('examSelector');
 
-  let currentTest = null;
-  let availableExams = [];
+  let currentTest = null;
+  let availableExams = [];
 
-  function clearForm() {
-    testForm.innerHTML = '';
-    resultsDiv.textContent = '';
-    checkAnswersBtn.classList.add('hidden');
-    showAnswersBtn.classList.add('hidden');
-    clearFormBtn.classList.add('hidden');
-    errorMessage.style.display = 'none';
-  }
+  function clearForm() {
+    testForm.innerHTML = '';
+    resultsDiv.textContent = '';
+    checkAnswersBtn.classList.add('hidden');
+    showAnswersBtn.classList.add('hidden');
+    clearFormBtn.classList.add('hidden');
+    errorMessage.style.display = 'none';
+  }
 
-  function hasAnswers() {
-    const inputs = testForm.querySelectorAll('input:checked, input[type="text"]:not([value=""]), select:not([value=""])');
-    return inputs.length > 0;
-  }
+  function hasAnswers() {
+    const inputs = testForm.querySelectorAll('input:checked, input[type="text"]:not([value=""]), select:not([value=""])');
+    return inputs.length > 0;
+  }
 
-  function roundToSigFigs(num, sigFigs) {
-    if (num === 0) return 0;
-    const mag = Math.floor(Math.log10(Math.abs(num))) + 1;
-    const scale = Math.pow(10, sigFigs - mag);
-    return Math.round(num * scale) / scale;
-  }
+  function roundToSigFigs(num, sigFigs) {
+    if (num === 0) return 0;
+    const mag = Math.floor(Math.log10(Math.abs(num))) + 1;
+    const scale = Math.pow(10, sigFigs - mag);
+    return Math.round(num * scale) / scale;
+  }
 
-  function countSigFigs(numStr) {
-    // Handle scientific notation
-    let coefficient = numStr;
-    if (/[eE][+-]?\d+$/.test(numStr)) {
-      coefficient = numStr.split(/[eE]/)[0];
-    }
-    // Remove leading/trailing zeros, decimal point for counting
-    const cleaned = coefficient.replace(/^0+|0+$/g, '').replace(/^\.|\.$/g, '');
-    // Count digits, excluding decimal point
-    return cleaned.replace('.', '').length;
-  }
+  function countSigFigs(numStr) {
+    // Handle scientific notation
+    let coefficient = numStr;
+    if (/[eE][+-]?\d+$/.test(numStr)) {
+      coefficient = numStr.split(/[eE]/)[0];
+    }
+    // Remove leading/trailing zeros, decimal point for counting
+    const cleaned = coefficient.replace(/^0+|0+$/g, '').replace(/^\.|\.$/g, '');
+    // Count digits, excluding decimal point
+    return cleaned.replace('.', '').length;
+  }
 
-  function createQuestionElement(q, index, showNumber) {
-    const container = document.createElement('div');
-    container.className = 'question';
+  function createQuestionElement(q, index, showNumber) {
+    const container = document.createElement('div');
+    container.className = 'question';
 
-    const questionHeader = document.createElement('h3');
-    questionHeader.innerHTML = (showNumber ? (index + 1) + '. ' : '');
-    container.appendChild(questionHeader);
+    const questionHeader = document.createElement('h3');
+    questionHeader.innerHTML = (showNumber ? (index + 1) + '. ' : '');
+    container.appendChild(questionHeader);
 
-    // Handle question content as an array of text and image blocks
-    if (Array.isArray(q.question)) {
-        q.question.forEach(block => {
-            const contentDiv = document.createElement('div');
-            contentDiv.classList.add('question-content-item');
-            if (block.type === 'text') {
-                const textSpan = document.createElement('span');
-                textSpan.classList.add('question-text');
-                textSpan.style.whiteSpace = 'pre-wrap';
-                textSpan.innerHTML = block.value;
-                contentDiv.appendChild(textSpan);
-            } else if (block.type === 'image') {
-                const questionImage = document.createElement('img');
-                questionImage.src = block.url;
-                questionImage.alt = block.alt || '';
-                questionImage.classList.add('question-image');
-                // Apply width and height if provided
-                if (block.width) questionImage.style.width = block.width;
-                if (block.height) questionImage.style.height = block.height;
-                contentDiv.appendChild(questionImage);
-            }
-            container.appendChild(contentDiv);
-        });
-    } else { // Fallback for old string format questions, if any (shouldn't happen with validation)
-        const textSpan = document.createElement('span');
-        textSpan.classList.add('question-text');
-        textSpan.style.whiteSpace = 'pre-wrap';
-        textSpan.innerHTML = q.question;
-        const contentDiv = document.createElement('div');
-        contentDiv.classList.add('question-content-item');
-        contentDiv.appendChild(textSpan);
-        container.appendChild(contentDiv);
-    }
+    // Handle question content as an array of text and image blocks
+    if (Array.isArray(q.question)) {
+        q.question.forEach(block => {
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('question-content-item');
+            if (block.type === 'text') {
+                const textSpan = document.createElement('span');
+                textSpan.classList.add('question-text');
+                textSpan.style.whiteSpace = 'pre-wrap';
+                textSpan.innerHTML = block.value;
+                contentDiv.appendChild(textSpan);
+            } else if (block.type === 'image') {
+                const questionImage = document.createElement('img');
+                questionImage.src = block.url;
+                questionImage.alt = block.alt || '';
+                questionImage.classList.add('question-image');
+                // Apply width and height if provided
+                if (block.width) questionImage.style.width = block.width;
+                if (block.height) questionImage.style.height = block.height;
+                contentDiv.appendChild(questionImage);
+            }
+            container.appendChild(contentDiv);
+        });
+    } else { // Fallback for old string format questions, if any (shouldn't happen with validation)
+        const textSpan = document.createElement('span');
+        textSpan.classList.add('question-text');
+        textSpan.style.whiteSpace = 'pre-wrap';
+        textSpan.innerHTML = q.question;
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('question-content-item');
+        contentDiv.appendChild(textSpan);
+        container.appendChild(contentDiv);
+    }
 
-    if (q.type === 'multiple-choice') {
-      const choicesDiv = document.createElement('div');
-      choicesDiv.className = 'choices';
+    if (q.type === 'multiple-choice') {
+      const choicesDiv = document.createElement('div');
+      choicesDiv.className = 'choices';
 
-      const formattedChoices = q.choices.map(choice => {
-          if (typeof choice === 'string') {
-              return { text: choice, imageUrl: '' };
-          }
-          return choice;
-      });
+      const formattedChoices = q.choices.map(choice => {
+          if (typeof choice === 'string') {
+              return { text: choice, imageUrl: '' };
+          }
+          return choice;
+      });
 
-      formattedChoices.forEach((choice, i) => {
-        const id = `q${q.id}_choice${i}`;
+      formattedChoices.forEach((choice, i) => {
+        const id = `q${q.id}_choice${i}`;
 
-        const label = document.createElement('label');
-        label.setAttribute('for', id);
+        const label = document.createElement('label');
+        label.setAttribute('for', id);
 
-        const input = document.createElement('input');
-        input.type = 'radio';
-        input.name = `q${q.id}`;
-        input.id = id;
-        input.value = choice.text;
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = `q${q.id}`;
+        input.id = id;
+        input.value = choice.text;
 
-        label.appendChild(input);
+        label.appendChild(input);
 
-        const span = document.createElement('span');
-        span.innerHTML = ' ' + choice.text;
-        label.appendChild(span);
+        const span = document.createElement('span');
+        span.innerHTML = ' ' + choice.text;
+        label.appendChild(span);
 
-        if (choice.imageUrl) {
-            const choiceImage = document.createElement('img');
-            choiceImage.src = choice.imageUrl;
-            choiceImage.alt = `Choice ${String.fromCharCode(65 + i)} image`;
-            choiceImage.classList.add('choice-image');
-            // Apply width and height if provided for choice images
-            if (choice.width) choiceImage.style.width = choice.width;
-            if (choice.height) choiceImage.style.height = choice.height;
-            label.appendChild(choiceImage);
-        }
+        if (choice.imageUrl) {
+            const choiceImage = document.createElement('img');
+            choiceImage.src = choice.imageUrl;
+            choiceImage.alt = `Choice ${String.fromCharCode(65 + i)} image`;
+            choiceImage.classList.add('choice-image');
+            // Apply width and height if provided for choice images
+            if (choice.width) choiceImage.style.width = choice.width;
+            if (choice.height) choiceImage.style.height = choice.height;
+            label.appendChild(choiceImage);
+        }
 
-        choicesDiv.appendChild(label);
-      });
+        choicesDiv.appendChild(label);
+      });
 
-      container.appendChild(choicesDiv);
-    } else if (q.type === 'number') {
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.name = `q${q.id}`;
-      input.id = `q${q.id}_input`;
-      input.placeholder = 'Enter a number';
-      container.appendChild(input);
+      container.appendChild(choicesDiv);
+    } else if (q.type === 'number') {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.name = `q${q.id}`;
+      input.id = `q${q.id}_input`;
+      input.placeholder = 'Enter a number';
+      container.appendChild(input);
 
-      if (Array.isArray(q.units) && q.units.length > 0) {
-        const select = document.createElement('select');
-        select.name = `q${q.id}_unit`;
-        select.className = 'unit-select';
-      
-        const sortedUnits = q.units.slice().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
-        const placeholderOption = document.createElement('option');
-        placeholderOption.value = '';
-        placeholderOption.textContent = '--Select Unit--';
-        placeholderOption.selected = true;
-        placeholderOption.disabled = true;
-        select.appendChild(placeholderOption);
-      
-        sortedUnits.forEach(u => {
-          const option = document.createElement('option');
-          option.value = u;
-          option.textContent = u;
-          select.appendChild(option);
-        });
-        container.appendChild(select);
-      }
-    } else if (q.type === 'short-answer') {
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.name = `q${q.id}`;
-      input.id = `q${q.id}_input`;
-      input.placeholder = 'Enter your answer';
-      container.appendChild(input);
-    }
+      if (Array.isArray(q.units) && q.units.length > 0) {
+        const select = document.createElement('select');
+        select.name = `q${q.id}_unit`;
+        select.className = 'unit-select';
+      
+        const sortedUnits = q.units.slice().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
+        const placeholderOption = document.createElement('option');
+        placeholderOption.value = '';
+        placeholderOption.textContent = '--Select Unit--';
+        placeholderOption.selected = true;
+        placeholderOption.disabled = true;
+        select.appendChild(placeholderOption);
+      
+        sortedUnits.forEach(u => {
+          const option = document.createElement('option');
+          option.value = u;
+          option.textContent = u;
+          select.appendChild(option);
+        });
+        container.appendChild(select);
+      }
+    } else if (q.type === 'short-answer') {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.name = `q${q.id}`;
+      input.id = `q${q.id}_input`;
+      input.placeholder = 'Enter your answer';
+      container.appendChild(input);
+    }
 
-    setTimeout(() => {
-      renderMathInElementSafe(container);
-    }, 0);
+    setTimeout(() => {
+      renderMathInElementSafe(container);
+    }, 0);
 
-    return container;
-  }
+    return container;
+  }
 
-  function validateTestData(testData) {
-    if (!testData.title || typeof testData.title !== 'string') return "Missing or invalid 'title' field.";
-    if (typeof testData.showQuestionNumbers !== 'boolean') return "Missing or invalid 'showQuestionNumbers' field.";
-    if (!Array.isArray(testData.questions) || testData.questions.length === 0) return "Missing or empty 'questions' array.";
-    
-    for (let i = 0; i < testData.questions.length; i++) {
-      const q = testData.questions[i];
-      if (!q.id || typeof q.id !== 'number') return `Question ${i+1}: Missing or invalid 'id' field.`;
-      if (!['multiple-choice', 'number', 'short-answer'].includes(q.type)) return `Question ${i+1}: Invalid 'type' field. Must be 'multiple-choice', 'number', or 'short-answer'.`;
-      
-      // Validation for points and weight (new)
+  function validateTestData(testData) {
+    if (!testData.title || typeof testData.title !== 'string') return "Missing or invalid 'title' field.";
+    if (typeof testData.showQuestionNumbers !== 'boolean') return "Missing or invalid 'showQuestionNumbers' field.";
+    if (!Array.isArray(testData.questions) || testData.questions.length === 0) return "Missing or empty 'questions' array.";
+    
+    for (let i = 0; i < testData.questions.length; i++) {
+      const q = testData.questions[i];
+      if (!q.id || typeof q.id !== 'number') return `Question ${i+1}: Missing or invalid 'id' field.`
+      if (!['multiple-choice', 'number', 'short-answer'].includes(q.type)) return `Question ${i+1}: Invalid 'type' field. Must be 'multiple-choice', 'number', or 'short-answer'.`;
+      
+      // Validation for points and weight (new)
         if (q.points === undefined || typeof q.points !== 'number' || q.points < 0) {
             return `Question ${i+1}: Missing or invalid 'points' field. Must be a non-negative number.`;
         }
@@ -273,288 +282,297 @@
             return `Question ${i+1}: 'weight' must be a non-negative number if provided.`;
         }
 
-      // Validation for new 'question' array structure
-      if (!Array.isArray(q.question) || q.question.length === 0) return `Question ${i+1}: Missing or empty 'question' array.`;
-      for (let j = 0; j < q.question.length; j++) {
-          const block = q.question[j];
-          if (typeof block !== 'object' || block === null || !block.type) return `Question ${i+1}, content block ${j+1}: Invalid content block structure.`;
-          if (block.type === 'text') {
-              if (typeof block.value !== 'string' || block.value === '') return `Question ${i+1}, content block ${j+1}: 'text' block must have a non-empty 'value' string.`;
-          } else if (block.type === 'image') {
-              if (typeof block.url !== 'string' || block.url === '') return `Question ${i+1}, content block ${j+1}: 'image' block must have a non-empty 'url' string.`;
-              if (block.alt !== undefined && typeof block.alt !== 'string') return `Question ${i+1}, content block ${j+1}: 'alt' must be a string if provided in image block.`;
-              if (block.width !== undefined && typeof block.width !== 'string') return `Question ${i+1}, content block ${j+1}: 'width' must be a string (e.g., '100px', '50%') if provided in image block.`;
-              if (block.height !== undefined && typeof block.height !== 'string') return `Question ${i+1}, content block ${j+1}: 'height' must be a string (e.g., '100px', 'auto') if provided in image block.`;
-          } else {
-              return `Question ${i+1}, content block ${j+1}: Invalid block type '${block.type}'. Must be 'text' or 'image'.`;
-          }
-      }
+      // Validation for new 'question' array structure
+      if (!Array.isArray(q.question) || q.question.length === 0) return `Question ${i+1}: Missing or empty 'question' array.`;
+      for (let j = 0; j < q.question.length; j++) {
+          const block = q.question[j];
+          if (typeof block !== 'object' || block === null || !block.type) return `Question ${i+1}, content block ${j+1}: Invalid content block structure.`;
+          if (block.type === 'text') {
+              if (typeof block.value !== 'string' || block.value === '') return `Question ${i+1}, content block ${j+1}: 'text' block must have a non-empty 'value' string.`;
+          } else if (block.type === 'image') {
+              if (typeof block.url !== 'string' || block.url === '') return `Question ${i+1}, content block ${j+1}: 'image' block must have a non-empty 'url' string.`;
+              if (block.alt !== undefined && typeof block.alt !== 'string') return `Question ${i+1}, content block ${j+1}: 'alt' must be a string if provided in image block.`;
+              if (block.width !== undefined && typeof block.width !== 'string') return `Question ${i+1}, content block ${j+1}: 'width' must be a string (e.g., '100px', '50%') if provided in image block.`;
+              if (block.height !== undefined && typeof block.height !== 'string') return `Question ${i+1}, content block ${j+1}: 'height' must be a string (e.g., '100px', 'auto') if provided in image block.`;
+          } else {
+              return `Question ${i+1}, content block ${j+1}: Invalid block type '${block.type}'. Must be 'text' or 'image'.`;
+          }
+      }
 
-      if (q.type === 'multiple-choice') {
-        if (!Array.isArray(q.choices) || q.choices.length === 0) return `Question ${i+1}: Missing or empty 'choices' array.`;
-        for(let j=0; j<q.choices.length; j++) {
-            const choice = q.choices[j];
-            if (typeof choice === 'object' && choice !== null) {
-                if (typeof choice.text !== 'string') return `Question ${i+1}, Choice ${j+1}: Missing or invalid 'text' in choice object.`;
-                if (choice.imageUrl !== undefined && typeof choice.imageUrl !== 'string') return `Question ${i+1}, Choice ${j+1}: 'imageUrl' must be a string if provided in choice object.`;
-                if (choice.width !== undefined && typeof choice.width !== 'string') return `Question ${i+1}, Choice ${j+1}: 'width' must be a string (e.g., '50px', 'auto') if provided in choice object.`;
-                if (choice.height !== undefined && typeof choice.height !== 'string') return `Question ${i+1}, Choice ${j+1}: 'height' must be a string (e.g., '50px', 'auto') if provided in choice object.`;
-            } else if (typeof choice !== 'string') {
-                return `Question ${i+1}, Choice ${j+1}: Choice must be a string or an object with 'text' property.`;
-            }
-        }
-
-        if (!q.answer || typeof q.answer !== 'string') return `Question ${i+1}: Missing or invalid 'answer' field.`;
-        const choiceTexts = q.choices.map(choice => typeof choice === 'string' ? choice : choice.text);
-        if (!choiceTexts.includes(q.answer)) return `Question ${i+1}: Answer "${q.answer}" does not match any choice text.`;
-      } else if (q.type === 'number') {
-        if (!q.answer || typeof q.answer !== 'object' || isNaN(q.answer.value)) return `Question ${i+1}: Missing or invalid 'answer' object or value.`;
-        if (q.units && !Array.isArray(q.units)) return `Question ${i+1}: 'units' must be an array if provided.`;
-        if (q.units && q.answer.unit && !q.units.includes(q.answer.unit)) return `Question ${i+1}: Answer unit does not match any provided unit.`;
-        if (q.sigFigs !== undefined && (!Number.isInteger(q.sigFigs) || q.sigFigs <= 0)) return `Question ${i+1}: 'sigFigs' must be a positive integer if provided.`;
-        if (q.tolerance !== undefined && (typeof q.tolerance !== 'number' || q.tolerance < 0)) return `Question ${i+1}: 'tolerance' must be a non-negative number if provided.`;
-      } else if (q.type === 'short-answer') {
-            // Updated validation for short-answer to allow object with text and optional imageUrl
-            if (typeof q.answer === 'string') {
-                if (q.answer.trim() === '') return `Question ${i+1}: 'answer' string must not be empty.`;
-            } else if (typeof q.answer === 'object' && q.answer !== null) {
-                if (typeof q.answer.text !== 'string' || q.answer.text.trim() === '') {
-                    return `Question ${i+1}: 'answer' object must have a non-empty 'text' string.`;
-                }
-                if (q.answer.imageUrl !== undefined && typeof q.answer.imageUrl !== 'string') {
-                    return `Question ${i+1}: 'answer' object 'imageUrl' must be a string if provided.`;
-                }
-            } else {
-                return `Question ${i+1}: Missing or invalid 'answer' field. Must be a string or an object with 'text' and optional 'imageUrl'.`;
+      if (q.type === 'multiple-choice') {
+        if (!Array.isArray(q.choices) || q.choices.length === 0) return `Question ${i+1}: Missing or empty 'choices' array.`;
+        for(let j=0; j<q.choices.length; j++) {
+            const choice = q.choices[j];
+            if (typeof choice === 'object' && choice !== null) {
+                if (typeof choice.text !== 'string') return `Question ${i+1}, Choice ${j+1}: Missing or invalid 'text' in choice object.`;
+                if (choice.imageUrl !== undefined && typeof choice.imageUrl !== 'string') return `Question ${i+1}, Choice ${j+1}: 'imageUrl' must be a string if provided in choice object.`;
+                if (choice.width !== undefined && typeof choice.width !== 'string') return `Question ${i+1}, Choice ${j+1}: 'width' must be a string (e.g., '50px', 'auto') if provided in choice object.`;
+                if (choice.height !== undefined && typeof choice.height !== 'string') return `Question ${i+1}, Choice ${j+1}: 'height' must be a string (e.g., '50px', 'auto') if provided in choice object.`;
+            } else if (typeof choice !== 'string') {
+                return `Question ${i+1}, Choice ${j+1}: Choice must be a string or an object with 'text' property.`;
             }
-      }
-    }
-    return null;
-  }
+        }
 
-  function loadTest(testData) {
-    clearForm();
-    currentTest = testData;
-    document.getElementById('examTitle').textContent = currentTest.title; 
+        if (!q.answer || typeof q.answer !== 'string') return `Question ${i+1}: Missing or invalid 'answer' field.`;
+        const choiceTexts = q.choices.map(choice => typeof choice === 'string' ? choice : choice.text);
+        if (!choiceTexts.includes(q.answer)) return `Question ${i+1}: Answer "${q.answer}" does not match any choice text.`;
+      } else if (q.type === 'number') {
+        if (!q.answer || typeof q.answer !== 'object' || isNaN(q.answer.value)) return `Question ${i+1}: Missing or invalid 'answer' object or value.`;
+        if (q.units && !Array.isArray(q.units)) return `Question ${i+1}: 'units' must be an array if provided.`;
+        if (q.units && q.answer.unit && !q.units.includes(q.answer.unit)) return `Question ${i+1}: Answer unit does not match any provided unit.`;
+        if (q.sigFigs !== undefined && (!Number.isInteger(q.sigFigs) || q.sigFigs <= 0)) return `Question ${i+1}: 'sigFigs' must be a positive integer if provided.`;
+        if (q.tolerance !== undefined && (typeof q.tolerance !== 'number' || q.tolerance < 0)) return `Question ${i+1}: 'tolerance' must be a non-negative number if provided.`;
+      } else if (q.type === 'short-answer') {
+        if (!q.answer) return `Question ${i+1}: Missing 'answer' field.`;
+        if (typeof q.answer === 'string') {
+          // Valid if it's a string
+          if (q.answer.trim() === '') return `Question ${i+1}: 'answer' string cannot be empty.`;
+        } else if (typeof q.answer === 'object' && q.answer !== null) {
+          if (typeof q.answer.text !== 'string' || q.answer.text.trim() === '') return `Question ${i+1}: 'answer' object must have a non-empty 'text' string.`;
+          if (q.answer.imageUrl !== undefined && (typeof q.answer.imageUrl !== 'string' || q.answer.imageUrl.trim() === '')) return `Question ${i+1}: 'imageUrl' in answer object must be a non-empty string if provided.`;
+        } else {
+          return `Question ${i+1}: Invalid 'answer' field. Must be a string or an object with 'text' and optional 'imageUrl'.`;
+        }
+      }
+    }
+    return null;
+  }
 
-    const showNumber = !!testData.showQuestionNumbers;
+  function loadTest(testData) {
+    clearForm();
+    currentTest = testData;
+    document.getElementById('examTitle').textContent = currentTest.title; 
 
-    testData.questions.forEach((q, i) => {
-      const qElem = createQuestionElement(q, i, showNumber);
-      testForm.appendChild(qElem);
-    });
+    const showNumber = !!testData.showQuestionNumbers;
 
-    checkAnswersBtn.classList.remove('hidden');
-    showAnswersBtn.classList.remove('hidden');
-    clearFormBtn.classList.remove('hidden');
-  }
+    testData.questions.forEach((q, i) => {
+      const qElem = createQuestionElement(q, i, showNumber);
+      testForm.appendChild(qElem);
+    });
 
-  function checkAnswer(userAnswer, correctAnswer, type, sigFigs, tolerance = 0.001) {
-    if (type === 'number') {
-      if (!userAnswer || userAnswer.value === null || userAnswer.unit === null) return false;
-      let userNum = Number(userAnswer.value);
-      let correctNum = Number(correctAnswer.value);
-      if (isNaN(userNum) || isNaN(correctNum)) return false;
+    checkAnswersBtn.classList.remove('hidden');
+    showAnswersBtn.classList.remove('hidden');
+    clearFormBtn.classList.remove('hidden');
+  }
 
-      if (sigFigs !== undefined) {
-        const userSigFigs = countSigFigs(userAnswer.value.toString().trim());
-        if (userSigFigs !== sigFigs) return false;
-        userNum = roundToSigFigs(userNum, sigFigs);
-        correctNum = roundToSigFigs(correctNum, sigFigs);
-      }
+  function checkAnswer(userAnswer, correctAnswer, type, sigFigs, tolerance = 0.001) {
+    if (type === 'number') {
+      if (!userAnswer || userAnswer.value === null || userAnswer.unit === null) return false;
+      let userNum = Number(userAnswer.value);
+      let correctNum = Number(correctAnswer.value);
+      if (isNaN(userNum) || isNaN(correctNum)) return false;
 
-      const numberMatch = Math.abs(userNum - correctNum) <= tolerance;
-      const unitMatch = userAnswer.unit === correctAnswer.unit;
-      return numberMatch && unitMatch;
-    } else if (type === 'multiple-choice') {
-      if (!userAnswer) return false;
-      return userAnswer.trim() === correctAnswer.trim();
-    } else if (type === 'short-answer') {
-      if (!userAnswer) return false;
-      // If correct answer has an object structure, compare with its 'text' property
-      const actualCorrectAnswer = typeof correctAnswer === 'object' ? correctAnswer.text : correctAnswer;
-      return userAnswer.trim().toLowerCase() === actualCorrectAnswer.trim().toLowerCase();
-    }
-    return false;
-  }
+      if (sigFigs !== undefined) {
+        const userSigFigs = countSigFigs(userAnswer.value.toString().trim());
+        if (userSigFigs !== sigFigs) return false;
+        userNum = roundToSigFigs(userNum, sigFigs);
+        correctNum = roundToSigFigs(correctNum, sigFigs);
+      }
 
-  function gradeTest(showCorrectAnswers = false) {
-    if (!currentTest) return;
+      const numberMatch = Math.abs(userNum - correctNum) <= tolerance;
+      const unitMatch = userAnswer.unit === correctAnswer.unit;
+      return numberMatch && unitMatch;
+    } else if (type === 'multiple-choice') {
+      if (!userAnswer) return false;
+      return userAnswer.trim() === correctAnswer.trim();
+    } else if (type === 'short-answer') {
+      if (!userAnswer) return false;
+      // Handle both string and object answer formats for short-answer
+      const expectedText = typeof correctAnswer === 'object' && correctAnswer !== null && correctAnswer.text !== undefined
+        ? correctAnswer.text
+        : correctAnswer; // Fallback to string if not an object or text property is missing
+      return userAnswer.trim().toLowerCase() === expectedText.trim().toLowerCase();
+    }
+    return false;
+  }
 
-    let score = 0;
-    let totalAvailablePoints = 0; // Initialize total available points
+  function gradeTest(showCorrectAnswers = false) {
+    if (!currentTest) return;
 
-    currentTest.questions.forEach((q, i) => {
+    let score = 0;
+    let totalAvailablePoints = 0;
+    const resultsContainer = document.createElement('div'); // Define resultsContainer here
+
+    currentTest.questions.forEach((q, i) => {
         const questionWeight = q.weight !== undefined ? q.weight : 1;
-        totalAvailablePoints += (q.points || 0) * questionWeight; // Accumulate weighted total points
+        totalAvailablePoints += (q.points || 0) * questionWeight;
 
-      let userAnswer;
-      if (q.type === 'multiple-choice') {
-        const selected = document.querySelector(`[name=q${q.id}]:checked`);
-        userAnswer = selected ? selected.value : null;
-      } else if (q.type === 'number') {
-        const input = document.querySelector(`[name=q${q.id}]`);
-        const unitSelect = document.querySelector(`[name=q${q.id}_unit]`);
-        userAnswer = {
-          value: input ? input.value : null,
-          unit: unitSelect ? unitSelect.value : null
-        };
-      } else if (q.type === 'short-answer') {
-        const input = document.querySelector(`[name=q${q.id}]`);
-        userAnswer = input ? input.value : null;
-      }
+      let userAnswer;
+      if (q.type === 'multiple-choice') {
+        const selected = document.querySelector(`[name=q${q.id}]:checked`);
+        userAnswer = selected ? selected.value : null;
+      } else if (q.type === 'number') {
+        const input = document.querySelector(`[name=q${q.id}]`);
+        const unitSelect = document.querySelector(`[name=q${q.id}_unit]`);
+        userAnswer = {
+          value: input ? input.value : null,
+          unit: unitSelect ? unitSelect.value : null
+        };
+      } else if (q.type === 'short-answer') {
+        const input = document.querySelector(`[name=q${q.id}]`);
+        userAnswer = input ? input.value : null;
+      }
 
-      const correct = checkAnswer(userAnswer, q.answer, q.type, q.sigFigs, q.tolerance);
+      const correct = checkAnswer(userAnswer, q.answer, q.type, q.sigFigs, q.tolerance);
 
-      if (correct) {
-            score += (q.points || 0) * questionWeight; // Add weighted points to score
-        }
+      if (correct) {
+        score += (q.points || 0) * questionWeight;
+      }
 
-      let yourAnswerStr = '';
-      if (q.type === 'number') {
-        yourAnswerStr = (userAnswer.value === '' || userAnswer.value === null) ? 'No answer' : userAnswer.value;
-        yourAnswerStr += userAnswer.unit ? ` ${userAnswer.unit}` : '';
-      } else {
-        yourAnswerStr = userAnswer || 'No answer';
-      }
+      let yourAnswerStr = '';
+      if (q.type === 'number') {
+        yourAnswerStr = (userAnswer.value === '' || userAnswer.value === null) ? 'No answer' : userAnswer.value;
+        yourAnswerStr += userAnswer.unit ? ` ${userAnswer.unit}` : '';
+      } else { // For multiple-choice and short-answer
+        yourAnswerStr = userAnswer || 'No answer';
+      }
 
-      let correctAnswerStr = '';
-      if (q.type === 'number') {
-        const displayValue = q.sigFigs !== undefined ? roundToSigFigs(q.answer.value, q.sigFigs) : q.answer.value;
-        correctAnswerStr = `${displayValue} ${q.answer.unit}`;
-      } else if (q.type === 'short-answer') {
-            correctAnswerStr = typeof q.answer === 'object' ? q.answer.text : q.answer;
-      } else { // For multiple-choice
-        correctAnswerStr = q.answer;
-      }
+      let correctAnswerDisplayStr = '';
+      let correctAnswerImageUrl = null;
 
-      const resultLine = document.createElement('div');
-      let resultText = `Q${i + 1}: ${correct ? 'Correct' : 'Incorrect'} (Your answer: ${yourAnswerStr}`;
-      if (showCorrectAnswers) {
-        resultText += `, Correct: ${correctAnswerStr}`;
-        if (q.type === 'short-answer' && typeof q.answer === 'object' && q.answer.imageUrl) {
-            resultText += `<br><img src="${q.answer.imageUrl}" alt="Correct Answer Image" style="max-width:200px; height:auto; margin-top:5px; border:1px solid #ccc;">`;
-        }
-      }
+      if (q.type === 'number') {
+        const displayValue = q.sigFigs !== undefined ? roundToSigFigs(q.answer.value, q.sigFigs) : q.answer.value;
+        correctAnswerDisplayStr = `${displayValue} ${q.answer.unit}`;
+      } else if (q.type === 'short-answer' && typeof q.answer === 'object' && q.answer !== null) {
+        correctAnswerDisplayStr = q.answer.text;
+        correctAnswerImageUrl = q.answer.imageUrl; // Get image URL for short-answer
+      } else { // For multiple-choice, or string short-answer
+        correctAnswerDisplayStr = q.answer;
+      }
+
+      const resultLine = document.createElement('div');
+      let resultText = `Q${i + 1}: ${correct ? 'Correct' : 'Incorrect'} (Your answer: ${yourAnswerStr}`;
+      if (showCorrectAnswers) {
+        resultText += `, Correct: ${correctAnswerDisplayStr}`;
+      }
       resultText += `)`;
-      resultLine.innerHTML = resultText;
-      resultLine.className = correct ? 'correct' : (q.type === 'short-answer' ? 'yellow' : 'incorrect');
-      resultsContainer.appendChild(resultLine);
-    });
+      resultLine.innerHTML = resultText;
+      resultLine.className = correct ? 'correct' : (q.type === 'short-answer' ? 'yellow' : 'incorrect');
 
-    const scoreLine = document.createElement('div');
-    // Use totalAvailablePoints for the total score calculation
-    scoreLine.textContent = `Your score: ${score.toFixed(1)} / ${totalAvailablePoints.toFixed(1)} (${((totalAvailablePoints > 0 ? score / totalAvailablePoints : 0) * 100).toFixed(1)}%)`;
-    resultsContainer.insertBefore(scoreLine, resultsContainer.firstChild);
+      // Add correct answer image if applicable and 'showCorrectAnswers' is true
+      if (showCorrectAnswers && correctAnswerImageUrl) {
+        const answerImage = document.createElement('img');
+        answerImage.src = correctAnswerImageUrl;
+        answerImage.alt = `Correct answer for Q${i + 1}`;
+        answerImage.classList.add('answer-image'); // Apply the new CSS class
+        resultLine.appendChild(answerImage);
+      }
+      resultsContainer.appendChild(resultLine);
+    });
 
-    resultsDiv.innerHTML = '';
-    resultsDiv.appendChild(resultsContainer);
+    const scoreLine = document.createElement('div');
+    // Use totalAvailablePoints for the total score calculation
+    scoreLine.textContent = `Your score: ${score} / ${totalAvailablePoints} (${((totalAvailablePoints > 0 ? score / totalAvailablePoints : 0) * 100).toFixed(1)}%)`;
+    resultsContainer.insertBefore(scoreLine, resultsContainer.firstChild);
 
-    setTimeout(() => {
-      renderMathInElementSafe(resultsContainer);
-    }, 0);
-  }
+    resultsDiv.innerHTML = '';
+    resultsDiv.appendChild(resultsContainer);
 
-  async function loadExamFromFile(filePath) {
-      errorMessage.style.display = 'none'; // Hide previous errors
-      try {
-          const response = await fetch(filePath);
-          if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status} - Could not load "${filePath}"`);
-          }
-          const testData = await response.json();
-          const validationError = validateTestData(testData);
-          if (validationError) {
-              errorMessage.textContent = `Error in "${filePath}": ${validationError}`;
-              errorMessage.style.display = 'block';
-              // If validation fails, attempt to reset selector to currently loaded exam
-              const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
-              examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
-              return;
-          }
-          if (hasAnswers() && !confirm('Loading a new exam will clear your current answers. Continue?')) {
-              // If user cancels, reset selector to previously loaded exam
-              const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
-              examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
-              return;
-          }
-          loadTest(testData);
-      } catch (e) {
-          errorMessage.textContent = `Failed to load exam from ${filePath}: ${e.message}`;
-          errorMessage.style.display = 'block';
-          // On error, reset the selector to the currently loaded exam
-          const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
-          examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
-      }
-  }
+    setTimeout(() => {
+      renderMathInElementSafe(resultsContainer);
+    }, 0);
+  }
 
-  // Function to initialize exams from manifest
-  async function initializeExams() {
-    try {
-      const response = await fetch('exam_manifest.json');
-      if (!response.ok) {
-        throw new Error(`Failed to load exam manifest: ${response.status}`);
-      }
-      availableExams = await response.json();
+  async function loadExamFromFile(filePath) {
+      errorMessage.style.display = 'none'; // Hide previous errors
+      try {
+          const response = await fetch(filePath);
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status} - Could not load "${filePath}"`);
+          }
+          const testData = await response.json();
+          const validationError = validateTestData(testData);
+          if (validationError) {
+              errorMessage.textContent = `Error in "${filePath}": ${validationError}`;
+              errorMessage.style.display = 'block';
+              // If validation fails, attempt to reset selector to currently loaded exam
+              const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
+              examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
+              return;
+          }
+          if (hasAnswers() && !confirm('Loading a new exam will clear your current answers. Continue?')) {
+              // If user cancels, reset selector to previously loaded exam
+              const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
+              examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
+              return;
+          }
+          loadTest(testData);
+      } catch (e) {
+          errorMessage.textContent = `Failed to load exam from ${filePath}: ${e.message}`;
+          errorMessage.style.display = 'block';
+          // On error, reset the selector to the currently loaded exam
+          const currentExamPath = currentTest ? availableExams.find(e => e.name === currentTest.title)?.path : '';
+          examSelector.value = currentExamPath || (availableExams.length > 0 ? availableExams[0].path : '');
+      }
+  }
 
-      // Populate the exam selector dropdown
-      examSelector.innerHTML = ''; // Clear existing options
-      availableExams.forEach(exam => {
-        const option = document.createElement('option');
-        option.value = exam.path;
-        option.textContent = exam.name;
-        examSelector.appendChild(option);
-      });
+  // Function to initialize exams from manifest
+  async function initializeExams() {
+    try {
+      const response = await fetch('exam_manifest.json');
+      if (!response.ok) {
+        throw new Error(`Failed to load exam manifest: ${response.status}`);
+      }
+      availableExams = await response.json();
 
-      // Load the first exam in the list by default
-      if (availableExams.length > 0) {
-        examSelector.value = availableExams[0].path;
-        loadExamFromFile(availableExams[0].path);
-      } else {
-        errorMessage.textContent = 'No exams found in exam_manifest.json. Please add some exam entries.';
-        errorMessage.style.display = 'block';
-      }
-    } catch (e) {
-      errorMessage.textContent = `Error initializing exams: ${e.message}. Make sure exam_manifest.json exists and is valid.`;
-      errorMessage.style.display = 'block';
-      console.error(e);
-    }
-  }
+      // Populate the exam selector dropdown
+      examSelector.innerHTML = ''; // Clear existing options
+      availableExams.forEach(exam => {
+        const option = document.createElement('option');
+        option.value = exam.path;
+        option.textContent = exam.name;
+        examSelector.appendChild(option);
+      });
+
+      // Load the first exam in the list by default
+      if (availableExams.length > 0) {
+        examSelector.value = availableExams[0].path;
+        loadExamFromFile(availableExams[0].path);
+      } else {
+        errorMessage.textContent = 'No exams found in exam_manifest.json. Please add some exam entries.';
+        errorMessage.style.display = 'block';
+      }
+    } catch (e) {
+      errorMessage.textContent = `Error initializing exams: ${e.message}. Make sure exam_manifest.json exists and is valid.`;
+      errorMessage.style.display = 'block';
+      console.error(e);
+    }
+  }
 
 
-  window.addEventListener('load', () => {
-    initializeExams();
-  });
+  window.addEventListener('load', () => {
+    initializeExams();
+  });
 
-  // Event listener for exam selector change
-  examSelector.addEventListener('change', (event) => {
-      const selectedFilePath = event.target.value;
-      if (selectedFilePath) {
-          loadExamFromFile(selectedFilePath);
-      }
-  });
+  // Event listener for exam selector change
+  examSelector.addEventListener('change', (event) => {
+      const selectedFilePath = event.target.value;
+      if (selectedFilePath) {
+          loadExamFromFile(selectedFilePath);
+      }
+  });
 
-  clearFormBtn.addEventListener('click', () => {
-    if (hasAnswers() && !confirm('Clearing the exam will reset all answers. Continue?')) {
-      return;
-    }
-    clearForm();
-    // After clearing, reload the initially loaded exam
-    if (availableExams.length > 0) {
-        examSelector.value = availableExams[0].path;
-        loadExamFromFile(availableExams[0].path);
-    }
-  });
+  clearFormBtn.addEventListener('click', () => {
+    if (hasAnswers() && !confirm('Clearing the exam will reset all answers. Continue?')) {
+      return;
+    }
+    clearForm();
+    // After clearing, reload the initially loaded exam
+    if (availableExams.length > 0) {
+        examSelector.value = availableExams[0].path;
+        loadExamFromFile(availableExams[0].path);
+    }
+  });
 
-  checkAnswersBtn.addEventListener('click', e => {
-    e.preventDefault();
-    gradeTest(false);
-  });
+  checkAnswersBtn.addEventListener('click', e => {
+    e.preventDefault();
+    gradeTest(false);
+  });
 
-  showAnswersBtn.addEventListener('click', e => {
-    e.preventDefault();
-    gradeTest(true);
-  });
+  showAnswersBtn.addEventListener('click', e => {
+    e.preventDefault();
+    gradeTest(true);
+  });
 </script>
 
 </body>
