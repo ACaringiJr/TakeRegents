@@ -1444,10 +1444,11 @@
         "kJ"
       ],
       "answer": {
-        "value": 13653,
+        "value": 13700,
         "unit": "J"
       },
-      "points": 2
+      "points": 2,
+      "sigFigs": 3
     },
     {
       "id": 53,
@@ -1473,16 +1474,15 @@
       "question": [
         {
           "type": "text",
-          "value": "54\u201355 Calculate the coeffi cient of kinetic friction between the ice skater and the ice.\n[Show all work, including the equation and substitution with units.]"
+          "value": "54\u201355 Calculate the coefficient of kinetic friction between the ice skater and the ice.\n[Show all work, including the equation and substitution with units.]"
         }
       ],
       "units": [],
       "answer": {
-        "value": 0.056,
+        "value": 0.020,
         "unit": ""
       },
       "sigFigs": 2,
-      "tolerance": 0.001,
       "points": 2
     },
     {
@@ -1505,7 +1505,7 @@
         "cm"
       ],
       "answer": {
-        "value": 0.02,
+        "value": 0.50,
         "unit": "m"
       },
       "points": 1
@@ -1524,10 +1524,11 @@
         "cm"
       ],
       "answer": {
-        "value": 0.36,
+        "value": 1.5,
         "unit": "m"
       },
-      "points": 1
+      "points": 1,
+      "sigFigs": 2
     },
     {
       "id": 58,
@@ -1548,7 +1549,7 @@
         "J"
       ],
       "answer": {
-        "value": 480,
+        "value": 1600,
         "unit": "J"
       },
       "points": 1
@@ -1566,7 +1567,7 @@
         "J"
       ],
       "answer": {
-        "value": 240,
+        "value": 1000,
         "unit": "J"
       },
       "points": 1
@@ -1606,7 +1607,6 @@
         "unit": "\u03a9"
       },
       "sigFigs": 3,
-      "tolerance": 0.1,
       "points": 2
     },
     {
@@ -1622,11 +1622,10 @@
         "A"
       ],
       "answer": {
-        "value": 0.16,
+        "value": 0.0819,
         "unit": "A"
       },
-      "sigFigs": 2,
-      "tolerance": 0.005,
+      "sigFigs": 3,
       "points": 2
     },
     {
@@ -1660,11 +1659,10 @@
         "m/s"
       ],
       "answer": {
-        "value": 11,
+        "value": 2.5,
         "unit": "m/s"
       },
       "sigFigs": 2,
-      "tolerance": 0.1,
       "points": 2
     },
     {
@@ -1684,7 +1682,6 @@
         "unit": "m/s"
       },
       "sigFigs": 2,
-      "tolerance": 0.1,
       "points": 2
     },
     {
@@ -1718,10 +1715,11 @@
         "J"
       ],
       "answer": {
-        "value": 0.6,
+        "value": 13,
         "unit": "J"
       },
-      "points": 1
+      "points": 1,
+      "sigFigs": 2
     },
     {
       "id": 72,
@@ -1736,11 +1734,10 @@
         "m/s"
       ],
       "answer": {
-        "value": 0.63,
+        "value": 2.9,
         "unit": "m/s"
       },
       "sigFigs": 2,
-      "tolerance": 0.01,
       "points": 2
     },
     {
@@ -1756,11 +1753,10 @@
         "m/s"
       ],
       "answer": {
-        "value": 0.38,
+        "value": 2.2,
         "unit": "m/s"
       },
       "sigFigs": 2,
-      "tolerance": 0.01,
       "points": 2
     },
     {
@@ -1776,10 +1772,11 @@
         "eV"
       ],
       "answer": {
-        "value": 1.82,
+        "value": 2.27,
         "unit": "eV"
       },
-      "points": 1
+      "points": 1,
+      "sigFigs": 3
     },
     {
       "id": 77,
@@ -1794,10 +1791,11 @@
         "J"
       ],
       "answer": {
-        "value": 2.912e-19,
+        "value": 3.63e-19,
         "unit": "J"
       },
-      "points": 1
+      "points": 1,
+      "sigFigs": 3
     },
     {
       "id": 78,
@@ -1812,11 +1810,10 @@
         "Hz"
       ],
       "answer": {
-        "value": 439000000000000.0,
+        "value": 5.48e14,
         "unit": "Hz"
       },
       "sigFigs": 3,
-      "tolerance": 1000000000000.0,
       "points": 2
     },
     {
@@ -1828,7 +1825,7 @@
           "value": "80 Based on your calculated value of the frequency of the emitted photon, determine its classifi cation in the electromagnetic spectrum."
         }
       ],
-      "answer": "Visible (Red) or Infrared",
+      "answer": "Green or visible light",
       "points": 1
     },
     {
@@ -1851,10 +1848,10 @@
         "\u00b0"
       ],
       "answer": {
-        "value": 30,
+        "value": 28,
         "unit": "degrees"
       },
-      "tolerance": 1,
+      "tolerance": 2,
       "points": 1
     },
     {
@@ -1871,11 +1868,11 @@
         "\u00b0"
       ],
       "answer": {
-        "value": 49.3,
+        "value": 43.5,
         "unit": "degrees"
       },
-      "sigFigs": 3,
-      "tolerance": 0.1,
+      "sigFigs": 2,
+      "tolerance": 0.5,
       "points": 2
     },
     {
@@ -1887,7 +1884,7 @@
           "value": "84 Starting at point O and using a protractor and ruler, draw the refracted ray at the appropriate angle of refraction on the diagram in your answer booklet."
         }
       ],
-      "answer": "Drawing: Ray drawn at approximately 49 degrees from the normal in air.",
+      "answer": "Refracted ray at 43° ± 2° to the normal",
       "points": 1
     },
     {
