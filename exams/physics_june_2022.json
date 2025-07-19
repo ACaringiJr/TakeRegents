@@ -1496,7 +1496,8 @@
         {
           "type": "image",
           "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-56-q.png",
-          "alt": "Question 56 image"
+          "alt": "Question 56 image",
+          "height": "200px"
         }
       ],
       "units": [
