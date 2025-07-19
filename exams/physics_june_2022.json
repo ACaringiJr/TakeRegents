@@ -1,4 +1,4 @@
-{
+
   "title": "Regents Examination in Physical Setting/Physics - June 2022",
   "showQuestionNumbers": false,
   "questions": [
@@ -116,7 +116,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-5-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-5-q.png",
           "alt": "Question 5 image"
         }
       ],
@@ -199,7 +199,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-8-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-8-q.png",
           "alt": "Question 8 image"
         }
       ],
@@ -386,7 +386,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-15-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-15-q.png",
           "alt": "Question 15 image"
         }
       ],
@@ -417,7 +417,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-16-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-16-q.png",
           "alt": "Question 16 image"
         }
       ],
@@ -734,26 +734,26 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-28-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-q.png",
           "alt": "Question 28 image"
         }
       ],
       "choices": [
         {
           "text": "(1) ->",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-28-a1.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a1.png"
         },
         {
           "text": "(2) v",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-28-a2.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a2.png"
         },
         {
           "text": "(3) <-",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-28-a3.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a3.png"
         },
         {
           "text": "(4) ^",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-28-a4.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a4.png"
         }
       ],
       "answer": "(4) ^",
@@ -847,7 +847,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-32-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-32-q.png",
           "alt": "Question 32 image"
         }
       ],
@@ -904,7 +904,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-34-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-34-q.png",
           "alt": "Question 34 image"
         }
       ],
@@ -935,7 +935,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-35-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-35-q.png",
           "alt": "Question 35 image"
         }
       ],
@@ -968,19 +968,19 @@
       "choices": [
         {
           "text": "Graph (1) - Displacement vs Time, straight line from origin with positive slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-36-a1.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a1.png"
         },
         {
           "text": "Graph (2) - Displacement vs Time, straight line with negative slope, intercepts y-axis above origin",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-36-a2.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a2.png"
         },
         {
           "text": "Graph (3) - Displacement vs Time, curve starting at origin and increasing slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-36-a3.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a3.png"
         },
         {
           "text": "Graph (4) - Displacement vs Time, curve starting above origin with decreasing slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-36-a4.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a4.png"
         }
       ],
       "answer": "Graph (1) - Displacement vs Time, straight line from origin with positive slope",
@@ -1050,19 +1050,19 @@
       "choices": [
         {
           "text": "Graph (1) - Speed of Light vs Absolute Index of Refraction, curve with decreasing slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-39-a1.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a1.png"
         },
         {
           "text": "Graph (2) - Speed of Light vs Absolute Index of Refraction, curve with increasing slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-39-a2.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a2.png"
         },
         {
           "text": "Graph (3) - Speed of Light vs Absolute Index of Refraction, horizontal straight line",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-39-a3.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a3.png"
         },
         {
           "text": "Graph (4) - Speed of Light vs Absolute Index of Refraction, straight line with positive slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-39-a4.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a4.png"
         }
       ],
       "answer": "Graph (1) - Speed of Light vs Absolute Index of Refraction, curve with decreasing slope",
@@ -1130,7 +1130,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-42-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-42-q.png",
           "alt": "Question 42 image"
         }
       ],
@@ -1161,7 +1161,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-43-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-43-q.png",
           "alt": "Question 43 image"
         }
       ],
@@ -1194,19 +1194,19 @@
       "choices": [
         {
           "text": "Graph (1) - Frequency vs Period, curve with decreasing slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-44-a1.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a1.png"
         },
         {
           "text": "Graph (2) - Frequency vs Period, curve with increasing slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-44-a2.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a2.png"
         },
         {
           "text": "Graph (3) - Frequency vs Period, horizontal straight line",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-44-a3.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a3.png"
         },
         {
           "text": "Graph (4) - Frequency vs Period, straight line with positive slope",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-44-a4.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a4.png"
         }
       ],
       "answer": "Graph (1) - Frequency vs Period, curve with decreasing slope",
@@ -1274,7 +1274,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-47-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-47-q.png",
           "alt": "Question 47 image"
         }
       ],
@@ -1305,7 +1305,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-48-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-48-q.png",
           "alt": "Question 48 image"
         }
       ],
@@ -1338,19 +1338,19 @@
       "choices": [
         {
           "text": "Diagram (1) - Wave with small amplitude",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-49-a1.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a1.png"
         },
         {
           "text": "Diagram (2) - Wave with larger amplitude than (1)",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-49-a2.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a2.png"
         },
         {
           "text": "Diagram (3) - Wave with larger amplitude than (2)",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-49-a3.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a3.png"
         },
         {
           "text": "Diagram (4) - Wave with largest amplitude",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-49-a4.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a4.png"
         }
       ],
       "answer": "Diagram (2) - Wave with larger amplitude than (1)",
@@ -1368,19 +1368,19 @@
       "choices": [
         {
           "text": "Diagram (1) - Light ray bending towards normal",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-50-a1.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a1.png"
         },
         {
           "text": "Diagram (2) - Light ray bending away from normal",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-50-a2.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a2.png"
         },
         {
           "text": "Diagram (3) - Light ray passing straight through",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-50-a3.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a3.png"
         },
         {
           "text": "Diagram (4) - Light ray reflecting",
-          "imageUrl": "/images/physics_06-2022/phys-06-22-50-a4.png"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a4.png"
         }
       ],
       "answer": "Diagram (3) - Light ray passing straight through",
@@ -1451,7 +1451,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-56-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-56-q.png",
           "alt": "Question 56 image"
         }
       ],
@@ -1494,7 +1494,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-58-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-58-q.png",
           "alt": "Question 58 image"
         }
       ],
@@ -1547,7 +1547,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-61-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-61-q.png",
           "alt": "Question 61 image"
         }
       ],
@@ -1604,7 +1604,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-66-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-66-q.png",
           "alt": "Question 66 image"
         }
       ],
@@ -1661,7 +1661,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-71-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-71-q.png",
           "alt": "Question 71 image"
         }
       ],
@@ -1792,7 +1792,7 @@
         },
         {
           "type": "image",
-          "url": "/images/physics_06-2022/phys-06-22-81-q.png",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-81-q.png",
           "alt": "Question 81 image"
         }
       ],
