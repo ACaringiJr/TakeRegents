@@ -1,6 +1,6 @@
 {
-  "title": "Regents Examination in Physical Setting/Physics - June 2022",
-  "showQuestionNumbers": false,
+  "title": "Regents Examination in Physical Setting/Physics - June 2023",
+  "showQuestionNumbers": true,
   "questions": [
     {
       "id": 1,
@@ -8,24 +8,24 @@
       "question": [
         {
           "type": "text",
-          "value": "1 Which terms identify two scalar quantities?"
+          "value": "1 Which pair of quantities are both scalar quantities?"
         }
       ],
       "choices": [
         {
-          "text": "(1) force and acceleration"
+          "text": "(1) speed and mass"
         },
         {
-          "text": "(2) impulse and distance"
+          "text": "(2) speed and momentum"
         },
         {
-          "text": "(3) mass and velocity"
+          "text": "(3) momentum and displacement"
         },
         {
-          "text": "(4) energy and time"
+          "text": "(4) mass and displacement"
         }
       ],
-      "answer": "(4) energy and time",
+      "answer": "(1) speed and mass",
       "points": 1
     },
     {
@@ -34,24 +34,24 @@
       "question": [
         {
           "type": "text",
-          "value": "2 A motorcyclist, initially traveling east at 15 meters per second, accelerates uniformly at a rate of 3.0 meters per second squared east to a velocity of 21 meters per second east.\nHow far does the motorcyclist travel while accelerating?"
+          "value": "2 In an attempt to get ketchup out of a bottle, a student takes off the cap, turns the bottle upside down, accelerates it downward, and then suddenly stops it.\nKetchup is released from the open bottle because the ketchup doesn't stop moving when the bottle does.\nThe ketchup leaving the bottle illustrates"
         }
       ],
       "choices": [
         {
-          "text": "(1) 1.0 m"
+          "text": "(1) inertia"
         },
         {
-          "text": "(2) 2.0 m"
+          "text": "(2) resistivity"
         },
         {
-          "text": "(3) 36 m"
+          "text": "(3) resonance"
         },
         {
-          "text": "(4) 72 m"
+          "text": "(4) mass being converted to energy"
         }
       ],
-      "answer": "(3) 36 m",
+      "answer": "(1) inertia",
       "points": 1
     },
     {
@@ -60,24 +60,24 @@
       "question": [
         {
           "type": "text",
-          "value": "3 A battery-powered electric motor is used to cause the wheels of a toy car to rotate.\nIn this motor, there is a conversion of"
+          "value": "3 The same net force is applied to object A and object B. The mass of B is three times greater than the mass of A. Compared to the acceleration of A, the acceleration of B is"
         }
       ],
       "choices": [
         {
-          "text": "(1) mechanical energy to electric energy"
+          "text": "(1) the same"
         },
         {
-          "text": "(2) electric energy to chemical energy"
+          "text": "(2) one-third as great"
         },
         {
-          "text": "(3) thermal energy to electric energy"
+          "text": "(3) three times as great"
         },
         {
-          "text": "(4) electric energy to mechanical energy"
+          "text": "(4) one-ninth as great"
         }
       ],
-      "answer": "(4) electric energy to mechanical energy",
+      "answer": "(2) one-third as great",
       "points": 1
     },
     {
@@ -86,24 +86,24 @@
       "question": [
         {
           "type": "text",
-          "value": "4 A projectile is launched horizontally from a height of 65 meters with an initial horizontal speed of 35 meters per second.\nWhat is the projectile's horizontal speed after it has fallen 25 meters?\n[Neglect friction.]"
+          "value": "4 What is the mass equivalent of $3.37\\times10^{-16}$ joule?"
         }
       ],
       "choices": [
         {
-          "text": "(1) $22~m/s$"
+          "text": "(1) $1.26\\times10^{-54}kg$"
         },
         {
-          "text": "(2) $35~m/s$"
+          "text": "(2) $3.74\\times10^{-36}kg$"
         },
         {
-          "text": "(3) $41~m/s$"
+          "text": "(3) $1.12\\times10^{-27}kg$"
         },
         {
-          "text": "(4) $280~m/s$"
+          "text": "(4) $5.08\\times10^{14}$ kg"
         }
       ],
-      "answer": "(2) $35~m/s$",
+      "answer": "(2) $3.74\\times10^{-36}kg$",
       "points": 1
     },
     {
@@ -112,34 +112,24 @@
       "question": [
         {
           "type": "text",
-          "value": "5 The diagram below represents two forces, $F_{1}$ and $F_{2},$ acting concurrently on a block sliding on a horizontal, frictionless surface."
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-5-q.png",
-          "alt": "Question 5 image",
-          "height": "250px"
-        },
-        {
-          "type": "text",
-          "value": "Which statement describes the motion of the block?"
+          "value": "5 Which object is in equilibrium?"
         }
       ],
       "choices": [
         {
-          "text": "(1) The block is accelerating to the right."
+          "text": "(1) Earth orbiting the Sun"
         },
         {
-          "text": "(2) The block is accelerating to the left."
+          "text": "(2) a thrown baseball at its highest point above the ground"
         },
         {
-          "text": "(3) The block is moving to the right with constant speed."
+          "text": "(3) a car moving at a constant speed in a straight line"
         },
         {
-          "text": "(4) The block is moving to the left with decreasing speed."
+          "text": "(4) a bicycle skidding to a stop in a straight line"
         }
       ],
-      "answer": "(3) The block is moving to the right with constant speed.",
+      "answer": "(3) a car moving at a constant speed in a straight line",
       "points": 1
     },
     {
@@ -148,24 +138,24 @@
       "question": [
         {
           "type": "text",
-          "value": "6 The magnitude of an unbalanced force applied to a 4.0-kilogram crate is 10. newtons.\nIf the magnitude of this applied unbalanced force is doubled, the inertia of the crate is"
+          "value": "6 A race car travels around a flat circular track at constant speed. The net force on the car acts"
         }
       ],
       "choices": [
         {
-          "text": "(1) halved"
+          "text": "(1) perpendicular to the car's velocity and toward the center of the circle"
         },
         {
-          "text": "(2) unchanged"
+          "text": "(2) perpendicular to the car's velocity and away from the center of the circle"
         },
         {
-          "text": "(3) doubled"
+          "text": "(3) parallel to the car's velocity and in the same direction as the velocity"
         },
         {
-          "text": "(4) quadrupled"
+          "text": "(4) parallel to the car's velocity and in the opposite direction as the velocity"
         }
       ],
-      "answer": "(2) unchanged",
+      "answer": "(1) perpendicular to the car's velocity and toward the center of the circle",
       "points": 1
     },
     {
@@ -174,24 +164,24 @@
       "question": [
         {
           "type": "text",
-          "value": "7 A 60.-kilogram man is pushing a 30.-kilogram lawn mower.\nCompared to the magnitude of the force exerted on the lawn mower by the man, the magnitude of the force exerted on the man by the lawn mower is"
+          "value": "7 An object is traveling in a horizontal, circular path at a constant speed.\nIf the radius of the path were doubled while the speed remained constant, the centripetal acceleration would be"
         }
       ],
       "choices": [
         {
-          "text": "(1) one-quarter as great"
+          "text": "(1) quartered"
         },
         {
-          "text": "(2) one-half as great"
+          "text": "(2) doubled"
         },
         {
-          "text": "(3) the same"
+          "text": "(3) halved"
         },
         {
-          "text": "(4) twice as great"
+          "text": "(4) quadrupled"
         }
       ],
-      "answer": "(3) the same",
+      "answer": "(3) halved",
       "points": 1
     },
     {
@@ -200,30 +190,24 @@
       "question": [
         {
           "type": "text",
-          "value": "8 The diagram below represents a roller coaster car traveling counterclockwise in a vertical circle.\nWhen the car is in the position shown, what are the directions of the centripetal force acting on the car and the velocity of the car?"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-8-q.png",
-          "alt": "Question 8 image",
-          "height": "300px"
+          "value": "8 A 600.-newton student pushes on a vertical wall for 20.0 seconds with a constant force having a magnitude of 100. newtons.\nWhat is the magnitude of the force that the wall exerts on the student?"
         }
       ],
       "choices": [
         {
-          "text": "(1) The centripetal force is directed to the right and the velocity is directed downward."
+          "text": "(1) 0.00 N"
         },
         {
-          "text": "(2) The centripetal force is directed downward and the velocity is directed to the right."
+          "text": "(2) 5.00 N"
         },
         {
-          "text": "(3) The centripetal force and velocity are both directed to the right."
+          "text": "(3) 100. N"
         },
         {
-          "text": "(4) The centripetal force and velocity are both directed downward."
+          "text": "(4) 600. N"
         }
       ],
-      "answer": "(1) The centripetal force is directed to the right and the velocity is directed downward.",
+      "answer": "(3) 100. N",
       "points": 1
     },
     {
@@ -232,24 +216,24 @@
       "question": [
         {
           "type": "text",
-          "value": "9 An electric motor with a power rating of $6.48\\times10^{4}$ watts is used to raise an elevator weighing $2.80\\times10^{4}$ newtons at constant speed.\nWhat is the total time required for the motor to raise the elevator a vertical distance of 20.0 meters?"
+          "value": "9 An unbalanced force of 20. newtons is applied to a mass of $1.0\\times10^{3}$ kilograms. After 10. seconds, the momentum of the mass will have changed by"
         }
       ],
       "choices": [
         {
-          "text": "(1) 0.116 s"
+          "text": "(1) $2.0\\times10^{2}kg\\bullet m/s$"
         },
         {
-          "text": "(2) 2.31 s"
+          "text": "(2) $2.0\\times10^{3}kg\\bullet m/s$"
         },
         {
-          "text": "(3) 8.64 s"
+          "text": "(3) $1.0\\times10^{4}kg\\bullet m/s$"
         },
         {
-          "text": "(4) 46.3 s"
+          "text": "(4) $2.0\\times10^{4}kg\\bullet m/s$"
         }
       ],
-      "answer": "(3) 8.64 s",
+      "answer": "(1) $2.0\\times10^{2}kg\\bullet m/s$",
       "points": 1
     },
     {
@@ -258,24 +242,37 @@
       "question": [
         {
           "type": "text",
-          "value": "10 A person standing on a sidewalk hears the siren of an ambulance as it approaches, passes by, and goes away from the person.\nCompared to the frequency of the sound emitted by the siren, the frequency of the sound observed by the person during this event is"
+          "value": "10 To lift a heavy block off the floor, a student pulls with force F on a rope that passes over a pulley, as shown in the diagram below."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-10-q.png",
+          "alt": "Diagram of a student pulling a block over a pulley with force F"
+        },
+        {
+          "type": "text",
+          "value": "Which pair of vectors represents the perpendicular components of the force the student exerts on the rope?"
         }
       ],
       "choices": [
         {
-          "text": "(1) higher, only"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-10-a1.png",
+          "text": "(1)"
         },
         {
-          "text": "(2) lower, only"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-10-a2.png",
+          "text": "(2)"
         },
         {
-          "text": "(3) first higher and then lower"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-10-a3.png",
+          "text": "(3)"
         },
         {
-          "text": "(4) first lower and then higher"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-10-a4.png",
+          "text": "(4)"
         }
       ],
-      "answer": "(3) first higher and then lower",
+      "answer": "(2)",
       "points": 1
     },
     {
@@ -284,24 +281,28 @@
       "question": [
         {
           "type": "text",
-          "value": "11 Which particles exhibit properties of waves in some experiments?"
+          "value": "11 Which graph best represents the relationship between the mass of an object and its distance from Earth's surface?"
         }
       ],
       "choices": [
         {
-          "text": "(1) photons, only"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-11-a1.png",
+          "text": "(1)"
         },
         {
-          "text": "(2) electrons, only"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-11-a2.png",
+          "text": "(2)"
         },
         {
-          "text": "(3) both photons and electrons"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-11-a3.png",
+          "text": "(3)"
         },
         {
-          "text": "(4) neither photons nor electrons"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-11-a4.png",
+          "text": "(4)"
         }
       ],
-      "answer": "(3) both photons and electrons",
+      "answer": "(1)",
       "points": 1
     },
     {
@@ -310,24 +311,37 @@
       "question": [
         {
           "type": "text",
-          "value": "12 The direction of the electric field at a point in space is defined as the direction of the force exerted by the field on a"
+          "value": "12 A compass is placed near a strong bar magnet as represented in the diagram below."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-12-q.png",
+          "alt": "Diagram of a compass near a bar magnet"
+        },
+        {
+          "type": "text",
+          "value": "Which diagram best represents the direction of the compass needle?"
         }
       ],
       "choices": [
         {
-          "text": "(1) test mass located at that point"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-12-a1.png",
+          "text": "(1)"
         },
         {
-          "text": "(2) magnetic north pole located at that point"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-12-a2.png",
+          "text": "(2)"
         },
         {
-          "text": "(3) negative test charge located at that point"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-12-a3.png",
+          "text": "(3)"
         },
         {
-          "text": "(4) positive test charge located at that point"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-12-a4.png",
+          "text": "(4)"
         }
       ],
-      "answer": "(4) positive test charge located at that point",
+      "answer": "(3)",
       "points": 1
     },
     {
@@ -336,24 +350,24 @@
       "question": [
         {
           "type": "text",
-          "value": "13 A net force of one newton will"
+          "value": "13 As Earth orbits the Sun in its elliptical orbit, the gravitational force between the Sun and Earth is"
         }
       ],
       "choices": [
         {
-          "text": "(1) accelerate a $1-kg$ mass at $1.0~m/s^{2}$"
+          "text": "(1) always attractive"
         },
         {
-          "text": "(2) accelerate a 1-kg mass at $9.8~m/s^{2}$"
+          "text": "(2) attractive as the Sun and Earth get closer together and repulsive as the Sun and Earth get farther apart"
         },
         {
-          "text": "(3) lift a $1-kg$ mass vertically at a constant speed of $1.0~m/s$"
+          "text": "(3) repulsive as the Sun and Earth get closer together and attractive as the Sun and Earth get farther apart"
         },
         {
-          "text": "(4) lift a $1-kg$ mass vertically at a constant speed of $9.8~m/s$"
+          "text": "(4) always repulsive"
         }
       ],
-      "answer": "(1) accelerate a $1-kg$ mass at $1.0~m/s^{2}$",
+      "answer": "(1) always attractive",
       "points": 1
     },
     {
@@ -362,24 +376,24 @@
       "question": [
         {
           "type": "text",
-          "value": "14 The elongation of a spring will be quadrupled if the magnitude of the force elongating the spring is"
+          "value": "14 Which unit is used to measure the work per unit charge required to move a charge in an electric field?"
         }
       ],
       "choices": [
         {
-          "text": "(1) quartered"
+          "text": "(1) ampere"
         },
         {
-          "text": "(2) halved"
+          "text": "(2) coulomb"
         },
         {
-          "text": "(3) doubled"
+          "text": "(3) volt"
         },
         {
-          "text": "(4) quadrupled"
+          "text": "(4) watt"
         }
       ],
-      "answer": "(4) quadrupled",
+      "answer": "(3) volt",
       "points": 1
     },
     {
@@ -388,34 +402,33 @@
       "question": [
         {
           "type": "text",
-          "value": "15 The vector diagram below represents the path and distances run by a student in a cross-country race."
+          "value": "15 The diagram below shows a negatively charged sphere and a point, P, located within the electric field produced by the charge on the sphere."
         },
         {
           "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-15-q.png",
-          "alt": "Question 15 image",
-          "height": "200px"
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-15-q.png",
+          "alt": "Diagram of a negatively charged sphere and point P"
         },
         {
           "type": "text",
-          "value": "The displacement of the student from start to finish is"
+          "value": "The direction of the electric field at point P is toward point"
         }
       ],
       "choices": [
         {
-          "text": "(1) 1.40 km north"
+          "text": "(1) A"
         },
         {
-          "text": "(2) 1.40 km south"
+          "text": "(2) B"
         },
         {
-          "text": "(3) 5.00 km north"
+          "text": "(3) C"
         },
         {
-          "text": "(4) 5.00 km south"
+          "text": "(4) D"
         }
       ],
-      "answer": "(2) 1.40 km south",
+      "answer": "(4) D",
       "points": 1
     },
     {
@@ -424,30 +437,24 @@
       "question": [
         {
           "type": "text",
-          "value": "16 The diagram below shows the arrangement of three charged hollow metal spheres, A, B, and C.\nThe arrows indicate the direction of the electric forces acting between the spheres.\nWhat spheres have static charges of the same sign?"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-16-q.png",
-          "alt": "Question 16 image",
-          "height": "200px"
+          "value": "16 Two point charges, $q_{1}$ and $q_{2}$, are initially a distance, d, apart.\nWhich change will cause the greatest increase in the electrostatic force between the two point charges, $q_{I}$ and $q_{2}?$"
         }
       ],
       "choices": [
         {
-          "text": "(1) A and B, only"
+          "text": "(1) double $q_{1}$"
         },
         {
-          "text": "(2) A and C, only"
+          "text": "(2) halve $q_{2}$"
         },
         {
-          "text": "(3) B and C, only"
+          "text": "(3) double d"
         },
         {
-          "text": "(4) A, B, and C"
+          "text": "(4) halve d"
         }
       ],
-      "answer": "(2) A and C, only",
+      "answer": "(4) halve d",
       "points": 1
     },
     {
@@ -456,24 +463,33 @@
       "question": [
         {
           "type": "text",
-          "value": "17 Two small charged spheres are located distance d from each other and experience an electrostatic force of attraction, $F_{e}$ If the magnitude of charge of each sphere is tripled and $F_{e}$ is unchanged, what other change must have occurred?"
+          "value": "17 The diagram below represents two identical conducting spheres."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-17-q.png",
+          "alt": "Diagram of two identical conducting spheres, A and B, with positive charges on sphere A and negative charges on sphere B."
+        },
+        {
+          "type": "text",
+          "value": "Which statement could be the correct explanation for the charge distribution on the spheres?"
         }
       ],
       "choices": [
         {
-          "text": "(1) The signs of both charges are changed."
+          "text": "(1) A small positively charged object is located between sphere A and sphere B."
         },
         {
-          "text": "(2) The sign of only one charge is changed."
+          "text": "(2) A small negatively charged object is located between sphere A and sphere B."
         },
         {
-          "text": "(3) Distance d was increased by a factor of three."
+          "text": "(3) A small positively charged object is located to the right of sphere B."
         },
         {
-          "text": "(4) Distance d was increased by a factor of nine."
+          "text": "(4) A small negatively charged object is located to the right of sphere B."
         }
       ],
-      "answer": "(3) Distance d was increased by a factor of three.",
+      "answer": "(2) A small negatively charged object is located between sphere A and sphere B.",
       "points": 1
     },
     {
@@ -482,24 +498,33 @@
       "question": [
         {
           "type": "text",
-          "value": "18 Compared to the resistance of an aluminum wire at $20^{\\circ}C$, the resistance of a tungsten wire of the same length and diameter at $20^{\\circ}C$ is approximately"
+          "value": "18 The diagram below represents a circuit containing a battery, two operating lamps, A and B, and four closed switches, $S_{1}$, $S_{2}$, $S_{3}$ and $S_{4}$"
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-18-q.png",
+          "alt": "Circuit diagram with battery, lamps A and B, and switches S1, S2, S3, S4."
+        },
+        {
+          "type": "text",
+          "value": "Which switch, when opened, causes both lamps to turn off?"
         }
       ],
       "choices": [
         {
-          "text": "(1) the same"
+          "text": "(1) $S_{I}$"
         },
         {
-          "text": "(2) twice as great"
+          "text": "(2) $S_{2}$"
         },
         {
-          "text": "(3) one-half as great"
+          "text": "(3) $S_{3}$"
         },
         {
-          "text": "(4) four times as great"
+          "text": "(4) $S_{4}$"
         }
       ],
-      "answer": "(2) twice as great",
+      "answer": "(1) $S_{I}$",
       "points": 1
     },
     {
@@ -508,24 +533,24 @@
       "question": [
         {
           "type": "text",
-          "value": "19 How much energy is expended when a current of 5.00 amperes is in a 5.00 ohm resistor for 5.00 seconds?"
+          "value": "19 What is the resistance of a 100.-watt bulb when operating a potential difference of 120. volts?"
         }
       ],
       "choices": [
         {
-          "text": "(1) 25.0 J"
+          "text": "(1) 1.20 \\u03a9"
         },
         {
-          "text": "(2) 125 J"
+          "text": "(2) 100. \\u03a9"
         },
         {
-          "text": "(3) 625 J"
+          "text": "(3) 120. \\u03a9"
         },
         {
-          "text": "(4) 3130 J"
+          "text": "(4) 144 \\u03a9"
         }
       ],
-      "answer": "(3) 625 J",
+      "answer": "(4) 144 \\u03a9",
       "points": 1
     },
     {
@@ -534,24 +559,24 @@
       "question": [
         {
           "type": "text",
-          "value": "20 The amount of electric current through an unknown resistor may be measured by connecting"
+          "value": "20 The interaction that is most responsible for binding three quarks together in a proton is the"
         }
       ],
       "choices": [
         {
-          "text": "(1) an ammeter in series with the resistor"
+          "text": "(1) strong force"
         },
         {
-          "text": "(2) an ammeter in parallel with the resistor"
+          "text": "(2) electromagnetic force"
         },
         {
-          "text": "(3) a voltmeter in series with the resistor"
+          "text": "(3) weak force"
         },
         {
-          "text": "(4) a voltmeter in parallel with the resistor"
+          "text": "(4) gravitational force"
         }
       ],
-      "answer": "(1) an ammeter in series with the resistor",
+      "answer": "(1) strong force",
       "points": 1
     },
     {
@@ -560,24 +585,24 @@
       "question": [
         {
           "type": "text",
-          "value": "21 Which phenomenon represents a wave spreading out behind a barrier as the wave passes by the edge of the barrier?"
+          "value": "21 One example of a force doing work is the force exerted by"
         }
       ],
       "choices": [
         {
-          "text": "(1) diffraction"
+          "text": "(1) Earth on a high diver falling toward a pool from a platform above"
         },
         {
-          "text": "(2) refraction"
+          "text": "(2) a hook on an engine held stationary above a car"
         },
         {
-          "text": "(3) reflection"
+          "text": "(3) a frictionless horizontal air hockey table on a puck moving across the table at a constant velocity"
         },
         {
-          "text": "(4) interference"
+          "text": "(4) a weightlifter on a barbell he holds motionless over his head"
         }
       ],
-      "answer": "(1) diffraction",
+      "answer": "(1) Earth on a high diver falling toward a pool from a platform above",
       "points": 1
     },
     {
@@ -586,24 +611,24 @@
       "question": [
         {
           "type": "text",
-          "value": "22 A 1.00 kilometer length of copper wire, A, with a cross-sectional area of $1.00\\times10^{-4}$ meter squared has a resistance of 0.172 ohm at $20^{\\circ}C$.\nAnother copper wire, B, is half as long and has twice the cross-sectional area of wire A. What is the resistance of copper wire B at $20^{\\circ}C!$?"
+          "value": "22 A ball falls freely from a rooftop to the street below.\nThe ball starts from rest with 20. joules of gravitational potential energy with respect to the street.\nThe total mechanical energy of the ball just before it hits the street is"
         }
       ],
       "choices": [
         {
-          "text": "(1) 0.0430 \u03a9"
+          "text": "(1) 0 J"
         },
         {
-          "text": "(2) 0.0860 \u03a9"
+          "text": "(2) 5.0 J"
         },
         {
-          "text": "(3) 0.172 \u03a9"
+          "text": "(3) 10. J"
         },
         {
-          "text": "(4) 0.344 \u03a9"
+          "text": "(4) 20. J"
         }
       ],
-      "answer": "(1) 0.0430 \u03a9",
+      "answer": "(4) 20. J",
       "points": 1
     },
     {
@@ -612,24 +637,24 @@
       "question": [
         {
           "type": "text",
-          "value": "23 The magnitude of electric force exerted on a small positive charge located between two oppositely charged parallel plates is"
+          "value": "23 Which statement describes the gravitational potential energy (PE), kinetic energy (KE), and internal (thermal) energy (Q), of a wooden crate as it is pushed across a level classroom floor at constant speed?"
         }
       ],
       "choices": [
         {
-          "text": "(1) smallest near the positive plate"
+          "text": "(1) The PE decreases, KE remains the same, and decreases."
         },
         {
-          "text": "(2) smallest near the negative plate"
+          "text": "(2) The PE increases, KE increases, and Q decreases."
         },
         {
-          "text": "(3) greatest midway between the plates"
+          "text": "(3) The PE remains the same, KE decreases, and increases."
         },
         {
-          "text": "(4) the same everywhere between the plates"
+          "text": "(4) The PE remains the same, KE remains the same, and Q increases."
         }
       ],
-      "answer": "(4) the same everywhere between the plates",
+      "answer": "(4) The PE remains the same, KE remains the same, and Q increases.",
       "points": 1
     },
     {
@@ -638,24 +663,24 @@
       "question": [
         {
           "type": "text",
-          "value": "24 An acoustic organ is a musical instrument with pipes.\nThe oscillation of air molecules in the pipes of the organ produces sound waves that are"
+          "value": "24 The oscillation of electrons up and down a metal antenna produces waves.\nThese waves are"
         }
       ],
       "choices": [
         {
-          "text": "(1) electromagnetic and longitudinal"
+          "text": "(1) mechanical and longitudinal"
         },
         {
-          "text": "(2) electromagnetic and transverse"
+          "text": "(2) mechanical and transverse"
         },
         {
-          "text": "(3) mechanical and longitudinal"
+          "text": "(3) electromagnetic and transverse"
         },
         {
-          "text": "(4) mechanical and transverse"
+          "text": "(4) electromagnetic and longitudinal"
         }
       ],
-      "answer": "(3) mechanical and longitudinal",
+      "answer": "(3) electromagnetic and transverse",
       "points": 1
     },
     {
@@ -664,24 +689,33 @@
       "question": [
         {
           "type": "text",
-          "value": "25 Which list identifies portions of the electromag- netic spectrum in order of increasing frequency?"
+          "value": "25 The diagram below shows an incident light ray reflecting from a plane mirror."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-25-q.png",
+          "alt": "Diagram of incident ray reflecting from a plane mirror"
+        },
+        {
+          "type": "text",
+          "value": "What is the angle of reflection?"
         }
       ],
       "choices": [
         {
-          "text": "(1) gamma ray, infrared, visible, ultraviolet"
+          "text": "(1) $96^{\\circ}$"
         },
         {
-          "text": "(2) ultraviolet, visible, infrared, gamma ray"
+          "text": "(2) $84^{\\circ}$"
         },
         {
-          "text": "(3) infrared, visible, ultraviolet, gamma ray"
+          "text": "(3) $48^{\\circ}$"
         },
         {
-          "text": "(4) gamma ray, ultraviolet, visible, infrared"
+          "text": "(4) $42^{\\circ}$"
         }
       ],
-      "answer": "(3) infrared, visible, ultraviolet, gamma ray",
+      "answer": "(4) $42^{\\circ}$",
       "points": 1
     },
     {
@@ -690,24 +724,24 @@
       "question": [
         {
           "type": "text",
-          "value": "26 A tuning fork is used to produce a sound wave having a frequency of 512 hertz.\nWhat is the wavelength of the sound wave in air at STP?"
+          "value": "26 A characteristic common to both sound waves and x rays is that they both"
         }
       ],
       "choices": [
         {
-          "text": "(1) 0.646 m"
+          "text": "(1) travel fastest in a vacuum"
         },
         {
-          "text": "(2) 1.55 m"
+          "text": "(2) cause particles to vibrate in a direction parallel to the wave's direction of motion"
         },
         {
-          "text": "(3) $3.31\\times10^{2}$ m"
+          "text": "(3) transmit energy without transmitting matter"
         },
         {
-          "text": "(4) $5.86\\times10^{5}$ m"
+          "text": "(4) are mechanical"
         }
       ],
-      "answer": "(1) 0.646 m",
+      "answer": "(3) transmit energy without transmitting matter",
       "points": 1
     },
     {
@@ -716,24 +750,33 @@
       "question": [
         {
           "type": "text",
-          "value": "27 An amplified sound wave produced by an opera singer shatters a glass. Which phenomenon best explains this event?"
+          "value": "27 The diagram below represents a wave moving to the right through a rope."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-27-q.png",
+          "alt": "Diagram of a wave moving through a rope to the right, with point P indicated."
+        },
+        {
+          "type": "text",
+          "value": "Point P in the rope is moving toward the"
         }
       ],
       "choices": [
         {
-          "text": "(1) diffraction"
+          "text": "(1) top of the page"
         },
         {
-          "text": "(2) reflection"
+          "text": "(2) bottom of the page"
         },
         {
-          "text": "(3) refraction"
+          "text": "(3) right"
         },
         {
-          "text": "(4) resonance"
+          "text": "(4) left"
         }
       ],
-      "answer": "(4) resonance",
+      "answer": "(1) top of the page",
       "points": 1
     },
     {
@@ -742,38 +785,24 @@
       "question": [
         {
           "type": "text",
-          "value": "28 The diagram below represents a wave traveling in a rope in the direction indicated.\nWhich arrow represents the motion of a particle at point P at the instant shown?"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-q.png",
-          "alt": "Question 28 image",
-          "height": "250px"
+          "value": "28 The diagram below represents a wave traveling in a uniform medium. The arrows indicate the direction of the wave's motion."
         }
       ],
       "choices": [
         {
-          "text": "(1)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a1.png",
-          "width": "100px"
+          "text": "(1) 0.05 m"
         },
         {
-          "text": "(2)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a2.png",
-          "height": "100px"
+          "text": "(2) 0.10 m"
         },
         {
-          "text": "(3)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a3.png",
-          "width": "100px"
+          "text": "(3) 0.15 m"
         },
         {
-          "text": "(4)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-28-a4.png",
-          "height": "100px"
+          "text": "(4) 0.20 m"
         }
       ],
-      "answer": "(4)",
+      "answer": "(2) 0.10 m",
       "points": 1
     },
     {
@@ -782,24 +811,29 @@
       "question": [
         {
           "type": "text",
-          "value": "29 If several resistors are connected in series in an electrical circuit, the potential difference across each resistor"
+          "value": "29 The diagram below shows a wave in a spring passing from a less dense medium into a more dense medium.\nBoth mediums are made of the same material."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-29-q.png",
+          "alt": "Diagram of a wave in a spring passing from a less dense medium into a more dense medium."
         }
       ],
       "choices": [
         {
-          "text": "(1) varies directly with the resistance of each resistor"
+          "text": "(1) Wave speed remains the same, and wavelength increases."
         },
         {
-          "text": "(2) varies inversely with the resistance of each resistor"
+          "text": "(2) Wave speed remains the same, and wavelength decreases."
         },
         {
-          "text": "(3) varies inversely with the square of the resistance of each resistor"
+          "text": "(3) Wave speed decreases, and wavelength increases."
         },
         {
-          "text": "(4) is independent of the resistance of each resistor"
+          "text": "(4) Wave speed decreases, and wavelength decreases."
         }
       ],
-      "answer": "(1) varies directly with the resistance of each resistor",
+      "answer": "(4) Wave speed decreases, and wavelength decreases.",
       "points": 1
     },
     {
@@ -808,24 +842,24 @@
       "question": [
         {
           "type": "text",
-          "value": "30 In medium X, light with a wavelength of $3.44\\times10^{-7}$ meter travels at $2.20\\times10^{8}$ meters per second.\nIn medium Y, this light has a wavelength of $3.12\\times10^{-7}$ meter.\nWhat is the speed of this light in medium Y?"
+          "value": "30 Compared to waves of blue light traveling in a vacuum, waves of red light traveling in a vacuum have"
         }
       ],
       "choices": [
         {
-          "text": "(1) $2.00\\times10^{8}m/s$"
+          "text": "(1) a lower frequency and a lower speed"
         },
         {
-          "text": "(2) $2.20\\times10^{8}m/s$"
+          "text": "(2) a lower frequency and the same speed"
         },
         {
-          "text": "(3) $2.43\\times10^{8}m/s$"
+          "text": "(3) the same frequency and a lower speed"
         },
         {
-          "text": "(4) $3.00\\times10^{8}m/s$"
+          "text": "(4) the same frequency and the same speed"
         }
       ],
-      "answer": "(1) $2.00\\times10^{8}m/s$",
+      "answer": "(2) a lower frequency and the same speed",
       "points": 1
     },
     {
@@ -834,24 +868,24 @@
       "question": [
         {
           "type": "text",
-          "value": "31 A nuclear reactor produces $2.7\\times10^{16}$ joules of energy per year.\nHow much mass is converted to energy by the reactor in one year?"
+          "value": "31 Earthquakes often cause buildings between twelve and forty stories high to vibrate at an amplitude high enough to be destructive.\nBuildings are often designed to absorb this vibrational energy that might cause them to vibrate at their natural frequency.\nThis tendency for an earthquake to cause a building to vibrate at a large amplitude is an example of"
         }
       ],
       "choices": [
         {
-          "text": "(1) 0.30 kg"
+          "text": "(1) resonance"
         },
         {
-          "text": "(2) 0.90 kg"
+          "text": "(2) the Doppler effect"
         },
         {
-          "text": "(3) $9.0\\times10^{7}kg$"
+          "text": "(3) refraction"
         },
         {
-          "text": "(4) $2.4\\times10^{33}kg$"
+          "text": "(4) diffraction"
         }
       ],
-      "answer": "(1) 0.30 kg",
+      "answer": "(1) resonance",
       "points": 1
     },
     {
@@ -860,30 +894,24 @@
       "question": [
         {
           "type": "text",
-          "value": "32 The diagram below shows the initial charge and position of two identical conducting spheres on insulating stands.\nIf the spheres are brought into contact with each other and separated, sphere B will have a net charge of"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-32-q.png",
-          "alt": "Question 32 image",
-          "height": "300px"
+          "value": "32 A photon of light has energy E and momentum p. If the speed of the photon is C, the momentum of the photon can be expressed as"
         }
       ],
       "choices": [
         {
-          "text": "(1) $-5\\times10^{-6}C$"
+          "text": "(1) E + C"
         },
         {
-          "text": "(2) $-2\\times10^{-6}C$"
+          "text": "(2) E - C"
         },
         {
-          "text": "(3) $+5\\times10^{-6}C$"
+          "text": "(3) E \\u2022 C"
         },
         {
-          "text": "(4) $-4\\times10^{-6}C$"
+          "text": "(4) E / C"
         }
       ],
-      "answer": "(2) $-2\\times10^{-6}C$",
+      "answer": "(4) E / C",
       "points": 1
     },
     {
@@ -892,24 +920,24 @@
       "question": [
         {
           "type": "text",
-          "value": "33 An antimuon neutrino is a"
+          "value": "33 The electron configuration of an atom changes from $1s^{2}2s^{2}2p^{6}3s^{1}$ to $1s^{2}2s^{2}2p^{6}3p^{1}$. This change occurs because the atom has"
         }
       ],
       "choices": [
         {
-          "text": "(1) lepton with a -le charge"
+          "text": "(1) gained a proton"
         },
         {
-          "text": "(2) lepton with 0 charge"
+          "text": "(2) gained an electron"
         },
         {
-          "text": "(3) meson with a -le charge"
+          "text": "(3) absorbed a photon"
         },
         {
-          "text": "(4) meson with 0 charge"
+          "text": "(4) emitted a photon"
         }
       ],
-      "answer": "(2) lepton with 0 charge",
+      "answer": "(3) absorbed a photon",
       "points": 1
     },
     {
@@ -918,30 +946,28 @@
       "question": [
         {
           "type": "text",
-          "value": "34 The graphs below show the displacement of a certain particle in a medium versus time due to two periodic waves, A and B, traveling through the medium.\nThe superposition of the two waves will cause the particle of the medium to have a maximum displacement of"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-34-q.png",
-          "alt": "Question 34 image",
-          "height": "550px"
+          "value": "34 In the reaction $p + \\bar{p} \\rightarrow 2\\gamma$, the $p$ is a proton and the $\\bar{p}$ is an antiproton.\nWhich statement best describes the products of this reaction?"
         }
       ],
       "choices": [
         {
-          "text": "(1) 1.0 m"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-34-a1.png",
+          "text": "(1)"
         },
         {
-          "text": "(2) 2.0 m"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-34-a2.png",
+          "text": "(2)"
         },
         {
-          "text": "(3) 2.5 m"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-34-a3.png",
+          "text": "(3)"
         },
         {
-          "text": "(4) 5.0 m"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-34-a4.png",
+          "text": "(4)"
         }
       ],
-      "answer": "(4) 5.0 m",
+      "answer": "(1)",
       "points": 1
     },
     {
@@ -950,235 +976,133 @@
       "question": [
         {
           "type": "text",
-          "value": "35 The diagram below represents a wire that is not part of a complete circuit, just above the poles of two magnets.\nMoving the wire downward between the poles in the direction shown in the diagram will"
+          "value": "35 The diagram below represents a path of a $K^{-}$ particle in a uniform magnetic field.\nThe magnetic field is directed into the page."
         },
         {
           "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-35-q.png",
-          "alt": "Question 35 image",
-          "height": "400px"
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-35-q.png",
+          "alt": "Diagram of a K- particle path in a uniform magnetic field directed into the page."
+        },
+        {
+          "type": "text",
+          "value": "Which fundamental interaction is responsible for the particle's motion in the magnetic field?"
         }
       ],
       "choices": [
         {
-          "text": "(1) induce an alternating magnetic field between the poles of the magnets"
+          "text": "(1) strong"
         },
         {
-          "text": "(2) induce a potential difference between the ends of the wire"
+          "text": "(2) weak"
         },
         {
-          "text": "(3) decrease the wire's resistivity"
+          "text": "(3) electromagnetic"
         },
         {
-          "text": "(4) reverse the direction of the magnetic field"
+          "text": "(4) gravitational"
         }
       ],
-      "answer": "(2) induce a potential difference between the ends of the wire",
+      "answer": "(3) electromagnetic",
       "points": 1
     },
     {
       "id": 36,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "36 Which graph best represents the motion of an object traveling at a constant positive velocity?"
+          "value": "Base your answers to questions 36 and 37 on the information below and on your knowledge of physics.\n\nA student on an all-terrain vehicle (ATV) drives around a circular dirt track at a constant speed of 12 meters per second.\nThe radius of the track is 45 meters.\n\n36 Calculate the magnitude of the centripetal acceleration of the ATV. [Show all work, including the equation and substitution with units.]"
         }
       ],
-      "choices": [
-        {
-          "text": "(1)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a1.png",
-          "height": "150px"
-        },
-        {
-          "text": "(2)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a2.png",
-          "height": "150px"
-        },
-        {
-          "text": "(3)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a3.png",
-          "height": "150px"
-        },
-        {
-          "text": "(4)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-36-a4.png",
-          "height": "150px"
-        }
-      ],
-      "answer": "(1)",
-      "points": 1
+      "answer": "a_c = v^2/r = (12 m/s)^2 / 45 m = 3.2 m/s^2",
+      "points": 2
     },
     {
       "id": 37,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "37 A cannonball is fired with an initial velocity of 100. meters per second at an angle of $15.0^{\\circ}$ above the horizontal.\nWhat are the horizontal $(v_{x})$ and vertical $(v_{y})$ components of this velocity?"
+          "value": "37 What is the direction of the centripetal force acting on the ATV at the instant it is at point A, as represented in the diagram below?\n"
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-37-q.png",
+          "alt": "Diagram of an ATV on a circular track, with point A indicated."
         }
       ],
-      "choices": [
-        {
-          "text": "(1) $v_{x}=96.6~m/s$, $v_{y}=25.9~m/s$"
-        },
-        {
-          "text": "(2) $v_{x}=25.9~m/s$ $v_{y}=96.6~m/s$"
-        },
-        {
-          "text": "(3) $v_{x}=76.0~m/s$, $v_{y}=65.0~m/s$"
-        },
-        {
-          "text": "(4) $v_{x}=65.0~m/s$ $v_{y}=76.0~m/s$"
-        }
-      ],
-      "answer": "(1) $v_{x}=96.6~m/s$, $v_{y}=25.9~m/s$",
+      "answer": "Toward the center of the circle / south / inward",
       "points": 1
     },
     {
       "id": 38,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "38 A 1200-kilogram car is moving at 10. meters per second when a braking force of 3000. newtons is applied.\nHow much time is required to bring the car to rest?"
+          "value": "Base your answers to questions 38 through 40 on the information and diagram below and on your knowledge of physics.\n\nA 0.500-kilogram mass is attached to one end of a string and swung in a horizontal circle of 0.250-meter radius, as shown in the diagram below.\nThe other end of the string is attached to a hook that is 0.750 meter above the floor.\nThe string makes an angle of $30.0^{\\circ}$ with the vertical.\n\n38 On the diagram below, draw and label the two forces acting on the mass."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-38-q.png",
+          "alt": "Diagram of a mass swung in a horizontal circle, with string attached to a hook."
         }
       ],
-      "choices": [
-        {
-          "text": "(1) 0.40 s"
-        },
-        {
-          "text": "(2) 2.5 s"
-        },
-        {
-          "text": "(3) 25 s"
-        },
-        {
-          "text": "(4) 4.0 s"
-        }
-      ],
-      "answer": "(4) 4.0 s",
-      "points": 1
+      "answer": "Weight (F_g) directed downward, and Tension (F_T) directed along the string.",
+      "points": 2
     },
     {
       "id": 39,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "39 Which graph best represents the relationship between the speed of light $(f=5.09\\times10^{14}Hz)$ in a transparent medium and the absolute index of refraction of the medium?"
+          "value": "39 Determine the magnitude of the gravitational force (weight) acting on the mass."
         }
       ],
-      "choices": [
-        {
-          "text": "(1)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a1.png",
-          "height": "150px"
-        },
-        {
-          "text": "(2)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a2.png",
-          "height": "150px"
-        },
-        {
-          "text": "(3)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a3.png",
-          "height": "150px"
-        },
-        {
-          "text": "(4)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-39-a4.png",
-          "height": "150px"
-        }
-      ],
-      "answer": "(1)",
+      "answer": "Fg = mg = (0.500 kg)(9.81 m/s^2) = 4.91 N",
       "points": 1
     },
     {
       "id": 40,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "40 A student uses a string to whirl a 0.25-kilogram mass in a horizontal circular path that has a 0.80-meter radius.\nIf the magnitude of the centripetal force exerted on the mass with the string is 25 newtons, the speed of the mass is"
+          "value": "40 Calculate the magnitude of the centripetal force acting on the mass. [Show all work, including the equation and substitution with units.]"
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-40-q.png",
+          "alt": "Blank space for work for question 40."
         }
       ],
-      "choices": [
-        {
-          "text": "(1) $2.8~m/s$"
-        },
-        {
-          "text": "(2) $8.9~m/s$"
-        },
-        {
-          "text": "(3) $11~m/s$"
-        },
-        {
-          "text": "(4) $80.m/s$"
-        }
-      ],
-      "answer": "(2) $8.9~m/s$",
-      "points": 1
+      "answer": "$F_c = F_T \\sin \\theta = (mg/\\cos\\theta) \\sin\\theta = mg \\tan\\theta = (0.500 kg)(9.81 m/s^2)(\\tan 30.0^{\\circ}) = 2.83 N$",
+      "points": 2
     },
     {
       "id": 41,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "41 A deuteron is formed by combining a proton and a neutron.\nThe mass of a deuteron is $2.39\\times10^{-3}$ universal mass unit less than the combined masses of a proton and a neutron.\nThis mass difference is equivalent to"
+          "value": "Base your answers to questions 41 through 44 on the information below and on your knowledge of physics.\n\nAn electric circuit consists of a variable resistor, a 12-volt battery, and a switch.\nWhen the switch is closed, the ammeter reads 3.0 amperes.\n\n41 What is the maximum power that can be supplied by the 12-volt battery when connected to various resistors? [1]"
         }
       ],
-      "choices": [
-        {
-          "text": "(1) $2.56\\times10^{-6}$ MeV"
-        },
-        {
-          "text": "(2) 2.23 MeV"
-        },
-        {
-          "text": "(3) 2.39 MeV"
-        },
-        {
-          "text": "(4) $2.15\\times10^{14}$ MeV"
-        }
-      ],
-      "answer": "(2) 2.23 MeV",
+      "answer": "P = V * I = 12 V * 3.0 A = 36 W",
       "points": 1
     },
     {
       "id": 42,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "42 A gravitational force of magnitude F exists between Earth and a satellite on Earth's surface.\nThe satellite is sent into orbit at a distance of three Earth radii above Earth's surface, as shown in the diagram below.\nWhat is the magnitude of the gravitational force between Earth and the satellite when the satellite is in orbit?"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-42-q.png",
-          "alt": "Question 42 image",
-          "height": "300px"
+          "value": "42 Calculate the minimum resistance of the variable resistor. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "choices": [
-        {
-          "text": "(1) $\\frac{1}{16}F$"
-        },
-        {
-          "text": "(2) $\\frac{1}{9}F$"
-        },
-        {
-          "text": "(3) 3F"
-        },
-        {
-          "text": "(4) 4F"
-        }
-      ],
-      "answer": "(1) $\\frac{1}{16}F$",
-      "points": 1
+      "answer": "R = V/I = 12 V / 3.0 A = 4.0 \\u03a9",
+      "points": 2
     },
     {
       "id": 43,
@@ -1186,91 +1110,53 @@
       "question": [
         {
           "type": "text",
-          "value": "43 As part of an investigation on quantization, a student measured and recorded the mass of five identical containers, each holding a different number of pennies.\nThe table shows the student's data.\nBased on the data, what is the most likely mass of one penny?"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-43-q.png",
-          "alt": "Question 43 image",
-          "height": "300px"
+          "value": "43 Which graph best represents the relationship between the current and the resistance in this circuit, for a constant potential difference?"
         }
       ],
       "choices": [
         {
-          "text": "(1) 3.2 g"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-43-a1.png",
+          "text": "(1)"
         },
         {
-          "text": "(2) 6.4 g"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-43-a2.png",
+          "text": "(2)"
         },
         {
-          "text": "(3) 9.6 g"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-43-a3.png",
+          "text": "(3)"
         },
         {
-          "text": "(4) 12.8 g"
-        }
-      ],
-      "answer": "(1) 3.2 g",
-      "points": 1
-    },
-    {
-      "id": 44,
-      "type": "multiple-choice",
-      "question": [
-        {
-          "type": "text",
-          "value": "44 Which graph represents the relationship between the frequency and period of a wave?"
-        }
-      ],
-      "choices": [
-        {
-          "text": "(1)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a1.png",
-          "height": "150px"
-        },
-        {
-          "text": "(2)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a2.png",
-          "height": "150px"
-        },
-        {
-          "text": "(3)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a3.png",
-          "height": "150px"
-        },
-        {
-          "text": "(4)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-44-a4.png",
-          "height": "150px"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-43-a4.png",
+          "text": "(4)"
         }
       ],
       "answer": "(4)",
       "points": 1
     },
     {
-      "id": 45,
-      "type": "multiple-choice",
+      "id": 44,
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "45 What is the current in a conductor if $3.15\\times10^{18}$ electrons pass a given point in the conductor in 10. seconds?"
+          "value": "44 State what happens to the power dissipated by the variable resistor as its resistance is increased. [1]"
         }
       ],
-      "choices": [
-        {
-          "text": "(1) 0.050 A"
-        },
-        {
-          "text": "(2) 2.0 A"
-        },
-        {
-          "text": "(3) 0.50 A"
-        },
-        {
-          "text": "(4) 0.20 A"
-        }
-      ],
-      "answer": "(1) 0.050 A",
+      "answer": "Power decreases.",
       "points": 1
+    },
+    {
+      "id": 45,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "Base your answers to questions 45 through 48 on the information and diagram below and on your knowledge of physics.\n\nTwo parallel metal plates are connected to a variable power source. The electric field strength between the plates is $2.0\\times10^{3}$ newtons per coulomb.\nA proton is located at rest between the plates, as shown in the diagram below.\n\n45 On the diagram below, draw at least four electric field lines to represent the electric field between the plates. [Include arrows to show the direction of the electric field.] [2]"
+        }
+      ],
+      "answer": "Electric field lines drawn parallel and equally spaced from the positive plate to the negative plate, with arrows pointing from positive to negative.",
+      "points": 2
     },
     {
       "id": 46,
@@ -1278,57 +1164,46 @@
       "question": [
         {
           "type": "text",
-          "value": "46 A particle with a charge of +3.0 nanocoulombs is placed in an electric field with a magnitude of 1500 newtons per coulomb.\nWhat is the magnitude of the electrostatic force exerted on the particle by the electric field?"
+          "value": "46 The diagram below shows two parallel metal plates connected to a variable power source. The electric field strength between the plates is $2.0\\times10^{3}$ newtons per coulomb.\nA proton is located at rest between the plates, as shown in the diagram below."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-46-q.png",
+          "alt": "Diagram of two parallel metal plates with a proton between them."
+        },
+        {
+          "type": "text",
+          "value": "Which statement describes the direction of the force on the proton due to the electric field?"
         }
       ],
       "choices": [
         {
-          "text": "(1) $4.5\\times10^{-6}N$"
+          "text": "(1) to the left"
         },
         {
-          "text": "(2) $5.0\\times10^{2}N$"
+          "text": "(2) to the right"
         },
         {
-          "text": "(3) $4.5\\times10^{11}N$"
+          "text": "(3) toward the top of the page"
         },
         {
-          "text": "(4) $5.0\\times10^{12}N$"
+          "text": "(4) toward the bottom of the page"
         }
       ],
-      "answer": "(1) $4.5\\times10^{-6}N$",
+      "answer": "(2) to the right",
       "points": 1
     },
     {
       "id": 47,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "47 The graph below represents the motion of an airplane that starts from rest and takes off from a straight runway.\nWhich quantity is represented by the slope of the graph?"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-47-q.png",
-          "alt": "Question 47 image",
-          "height": "300px"
+          "value": "47 Calculate the magnitude of the electrostatic force acting on the proton due to the electric field. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "choices": [
-        {
-          "text": "(1) total distance traveled"
-        },
-        {
-          "text": "(2) displacement"
-        },
-        {
-          "text": "(3) average speed"
-        },
-        {
-          "text": "(4) acceleration"
-        }
-      ],
-      "answer": "(4) acceleration",
-      "points": 1
+      "answer": "$F_e = Eq = (2.0\\times10^3 N/C)(1.60\\times10^{-19} C) = 3.2\\times10^{-16} N$",
+      "points": 2
     },
     {
       "id": 48,
@@ -1336,240 +1211,243 @@
       "question": [
         {
           "type": "text",
-          "value": "48 The diagram below represents two horizontal platforms that are at different heights above level ground.\nA ball rolls off the taller platform with a horizontal speed of 15 meters per second and travels through the air, landing on the top of the shorter platform.\nWhat is the total time the ball is in the air? [Neglect friction.]"
+          "value": "48 The diagram below shows two parallel metal plates connected to a variable power source. The electric field strength between the plates is $2.0\\times10^{3}$ newtons per coulomb.\nA proton is located at rest between the plates, as shown in the diagram below."
         },
         {
           "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-48-q.png",
-          "alt": "Question 48 image",
-          "height": "220px"
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-48-a1.png",
+          "alt": "Diagram of two parallel metal plates with a proton between them."
+        },
+        {
+          "type": "text",
+          "value": "Which diagram best represents the magnitude of the electrostatic force as the electric field strength between the plates is increased?"
         }
       ],
       "choices": [
         {
-          "text": "(1) 0.16 s"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-48-a1.png",
+          "text": "(1)"
         },
         {
-          "text": "(2) 0.49 s"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-48-a2.png",
+          "text": "(2)"
         },
         {
-          "text": "(3) 0.70 s"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-48-a3.png",
+          "text": "(3)"
         },
         {
-          "text": "(4) 1.1 s"
+          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-48-a4.png",
+          "text": "(4)"
         }
       ],
-      "answer": "(3) 0.70 s",
+      "answer": "(1)",
       "points": 1
     },
     {
       "id": 49,
-      "type": "multiple-choice",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "49 Four mechanical waves are created in the same medium over the same time interval.\nWhich diagram represents the wave that transfers the greatest amount of energy?"
+          "value": "Base your answers to questions 49 through 51 on the information and diagram below and on your knowledge of physics.\n\nA light ray traveling in air is incident on a block of transparent plastic at an angle of incidence of $45^{\\circ}$. The diagram below shows the light ray as it travels from air into the plastic.\n\n49 Using a protractor, measure the angle of refraction for the light ray in the plastic. [1]"
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-49-q.png",
+          "alt": "Diagram of a light ray traveling from air into transparent plastic, showing angle of incidence and refraction."
         }
       ],
-      "choices": [
-        {
-          "text": "(1)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a1.png",
-          "height": "200px"
-        },
-        {
-          "text": "(2)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a2.png",
-          "height": "200px"
-        },
-        {
-          "text": "(3)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a3.png",
-          "height": "200px"
-        },
-        {
-          "text": "(4)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-49-a4.png",
-          "height": "200px"
-        }
-      ],
-      "answer": "(2)",
+      "answer": "28 \\u00b0 \\u00b1 2 \\u00b0",
       "points": 1
     },
     {
       "id": 50,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "50 Calculate the index of refraction of the plastic. [Show all work, including the equation and substitution with units.] [2]"
+        }
+      ],
+      "answer": "$n_{plastic} = (n_{air} \\sin \\theta_{air}) / \\sin \\theta_{plastic} = (1.00 \\sin 45^{\\circ}) / \\sin 28^{\\circ} = 1.5$",
+      "points": 2
+    },
+    {
+      "id": 51,
       "type": "multiple-choice",
       "question": [
         {
           "type": "text",
-          "value": "50 Which diagram represents a light ray increasing in speed as it travels from one medium to another?"
+          "value": "51 The diagram below shows a light ray traveling in air is incident on a block of transparent plastic at an angle of incidence of $45^{\\circ}$. The diagram below shows the light ray as it travels from air into the plastic."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-51-q.png",
+          "alt": "Diagram of a light ray traveling from air into transparent plastic, showing angle of incidence and refraction."
+        },
+        {
+          "type": "text",
+          "value": "Which row in the chart below correctly describes the light ray as it travels from air into the plastic?"
         }
       ],
       "choices": [
         {
-          "text": "(1)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a1.png",
-          "height": "200px"
+          "text": "(1)"
         },
         {
-          "text": "(2)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a2.png",
-          "height": "200px"
+          "text": "(2)"
         },
         {
-          "text": "(3)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a3.png",
-          "height": "200px"
+          "text": "(3)"
         },
         {
-          "text": "(4)",
-          "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-50-a4.png",
-          "height": "200px"
+          "text": "(4)"
         }
       ],
-      "answer": "(3)",
+      "answer": "(1)",
       "points": 1
     },
     {
-      "id": 51,
-      "type": "number",
+      "id": 52,
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "51\u201352 To charge a cell-phone battery, $3.69 \\times  10^3$ coulombs of charge is moved through a potential difference of 3.70 volts.\nCalculate the maximum amount of electrical energy gained by the battery.\n[Show all work, including the equation and substitution with units.]"
+          "value": "Base your answers to questions 52 and 53 on the information below and on your knowledge of physics.\n\nA $1.00\\times10^{3}$-kilogram car accelerates uniformly from 0 meter per second to 20.0 meters per second in 4.00 seconds.\n\n52 Calculate the magnitude of the net force accelerating the car. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "units": [
-        "J",
-        "kJ"
-      ],
-      "answer": {
-        "value": 13700,
-        "unit": "J"
-      },
-      "points": 2,
-      "sigFigs": 3
+      "answer": "$F_{net} = ma = (1.00\\times10^3 kg) (20.0 m/s / 4.00 s) = 5.00\\times10^3 N$",
+      "points": 2
     },
     {
       "id": 53,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "53 Determine the magnitude of the weight of the ice skater."
+          "value": "53 On the grid in your answer booklet, sketch a graph representing the relationship between the magnitude of the net force on the car and the time as the car accelerates uniformly. [1]"
         }
       ],
-      "units": [
-        "N"
-      ],
-      "answer": {
-        "value": 540,
-        "unit": "N"
-      },
+      "answer": "A horizontal line at a constant non-zero force value.",
       "points": 1
     },
     {
       "id": 54,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "54\u201355 Calculate the coefficient of kinetic friction between the ice skater and the ice.\n[Show all work, including the equation and substitution with units.]"
+          "value": "Base your answers to questions 54 through 57 on the information and diagram below and on your knowledge of physics.\n\nA 0.050-kilogram mass is attached to a spring, forming a simple pendulum.\nThe mass is pulled 0.15 meter to the left of its equilibrium position and released from rest.\nWhen the mass is at its equilibrium position, its speed is 0.70 meter per second.\n[Neglect friction.]\n\n54 Determine the maximum kinetic energy of the mass. [1]"
         }
       ],
-      "units": [],
-      "answer": {
-        "value": 0.020,
-        "unit": ""
-      },
-      "sigFigs": 2,
-      "points": 2
-    },
-    {
-      "id": 56,
-      "type": "number",
-      "question": [
-        {
-          "type": "text",
-          "value": "56 Determine the amplitude of the wave produced in the spring."
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-56-q.png",
-          "alt": "Question 56 image",
-          "height": "200px"
-        }
-      ],
-      "units": [
-        "m",
-        "cm"
-      ],
-      "answer": {
-        "value": 0.50,
-        "unit": "m"
-      },
+      "answer": "$KE_{max} = 1/2 mv^2 = 1/2 (0.050 kg)(0.70 m/s)^2 = 0.012 J$",
       "points": 1
     },
     {
-      "id": 57,
-      "type": "number",
+      "id": 55,
+      "type": "multiple-choice",
       "question": [
         {
           "type": "text",
-          "value": "57 Determine the wavelength of the wave produced in the spring."
-        }
-      ],
-      "units": [
-        "m",
-        "cm"
-      ],
-      "answer": {
-        "value": 1.5,
-        "unit": "m"
-      },
-      "points": 1,
-      "sigFigs": 2
-    },
-    {
-      "id": 58,
-      "type": "number",
-      "question": [
-        {
-          "type": "text",
-          "value": "58 Determine the total work done, in joules, by the 80.-newton force in pulling the box to the top of the incline."
+          "value": "55 The diagram below shows a 0.050-kilogram mass is attached to a spring, forming a simple pendulum.\nThe mass is pulled 0.15 meter to the left of its equilibrium position and released from rest.\nWhen the mass is at its equilibrium position, its speed is 0.70 meter per second.\n[Neglect friction.]"
         },
         {
           "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-58-q.png",
-          "alt": "Question 58 image",
-          "height": "300px"
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-55-q.png",
+          "alt": "Diagram of a simple pendulum with a mass on a spring."
+        },
+        {
+          "type": "text",
+          "value": "Which row in the chart below correctly describes the energy of the pendulum as it swings from its maximum displacement to its equilibrium position?"
         }
       ],
-      "units": [
-        "J"
+      "choices": [
+        {
+          "text": "(1)"
+        },
+        {
+          "text": "(2)"
+        },
+        {
+          "text": "(3)"
+        },
+        {
+          "text": "(4)"
+        }
       ],
-      "answer": {
-        "value": 1600,
-        "unit": "J"
-      },
+      "answer": "(1)",
+      "points": 1
+    },
+    {
+      "id": 56,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "56 Calculate the maximum potential energy of the mass. [Show all work, including the equation and substitution with units.] [2]"
+        }
+      ],
+      "answer": "$PE_{max} = KE_{max} = 0.012 J$",
+      "points": 2
+    },
+    {
+      "id": 57,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "57 Determine the period of the pendulum. [1]"
+        }
+      ],
+      "answer": "T = 2\\u03c0\\u221a(L/g). The length (L) is needed.",
+      "points": 1
+    },
+    {
+      "id": 58,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "Base your answers to questions 58 through 60 on the information and diagram below and on your knowledge of physics.\n\nSolar cells convert light energy into electrical energy. The electrical energy can be used to charge a battery.\nThe diagram below represents a solar cell charging a battery.\n\n58 What is the rate at which the solar cell delivers energy to the battery? [1]"
+        }
+      ],
+      "answer": "Power (rate of energy transfer) is needed. Values for voltage and current are required.",
       "points": 1
     },
     {
       "id": 59,
-      "type": "number",
+      "type": "multiple-choice",
       "question": [
         {
           "type": "text",
-          "value": "59 Determine the total amount of gravitational potential energy, in joules, gained by the box as it is pulled to the top of the incline."
+          "value": "59 The diagram below represents a solar cell charging a battery."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-59-q.png",
+          "alt": "Diagram of a solar cell charging a battery."
+        },
+        {
+          "type": "text",
+          "value": "Which energy conversion occurs when the solar cell charges the battery?"
         }
       ],
-      "units": [
-        "J"
+      "choices": [
+        {
+          "text": "(1) chemical to light"
+        },
+        {
+          "text": "(2) light to chemical"
+        },
+        {
+          "text": "(3) light to nuclear"
+        },
+        {
+          "text": "(4) nuclear to light"
+        }
       ],
-      "answer": {
-        "value": 1000,
-        "unit": "J"
-      },
+      "answer": "(2) light to chemical",
       "points": 1
     },
     {
@@ -1578,54 +1456,58 @@
       "question": [
         {
           "type": "text",
-          "value": "60 Explain why there is a difference between the total work done by the 80.-newton force in pulling the box to the top of the incline and the amount of gravitational potential energy gained by the box as it was pulled to the top of the incline."
+          "value": "60 If the solar cell provides a current of 0.020 ampere to the 1.5-volt battery for 20. seconds, calculate the total energy transferred from the solar cell to the battery. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "answer": "Work was done to overcome friction.",
-      "points": 1
+      "answer": "$E = P\\Delta t = (I V) \\Delta t = (0.020 A)(1.5 V)(20. s) = 0.60 J$",
+      "points": 2
     },
     {
       "id": 61,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "61\u201362 Calculate the equivalent resistance of the circuit.\n[Show all work, including the equation and substitution with units.]"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-61-q.png",
-          "alt": "Question 61 image",
-          "height": "200px"
+          "value": "Base your answers to questions 61 through 63 on the information below and on your knowledge of physics.\n\nA $1.50 \\times 10^3$-kilogram car traveling at 15.0 meters per second collides with a $1.00 \\times 10^3$-kilogram car that is initially at rest.\nImmediately after the collision, the $1.50 \\times 10^3$-kilogram car continues to travel in the same direction at 5.00 meters per second.\n\n61 Calculate the momentum of the $1.50 \\times 10^3$-kilogram car before the collision. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "units": [
-        "\u03a9"
+      "answer": "$p = mv = (1.50\\times10^3 kg)(15.0 m/s) = 2.25\\times10^4 kg\\bullet m/s$",
+      "points": 2
+    },
+    {
+      "id": 62,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "62 Calculate the speed of the $1.00 \\times 10^3$-kilogram car immediately after the collision. [Show all work, including the equation and substitution with units.] [2]"
+        }
       ],
-      "answer": {
-        "value": 73.3,
-        "unit": "\u03a9"
-      },
-      "sigFigs": 3,
+      "answer": "$m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f}$\n$(1.50\\times10^3 kg)(15.0 m/s) + (1.00\\times10^3 kg)(0 m/s) = (1.50\\times10^3 kg)(5.00 m/s) + (1.00\\times10^3 kg)v_{2f}$\n$2.25\\times10^4 kg\\bullet m/s = 7.50\\times10^3 kg\\bullet m/s + (1.00\\times10^3 kg)v_{2f}$\n$1.50\\times10^4 kg\\bullet m/s = (1.00\\times10^3 kg)v_{2f}$\n$v_{2f} = 15.0 m/s$",
       "points": 2
     },
     {
       "id": 63,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "63\u201364 Calculate the total current in the circuit.\n[Show all work, including the equation and substitution with units.]"
+          "value": "63 Is the collision elastic or inelastic? [1]\nSupport your answer with a calculation. [2]"
         }
       ],
-      "units": [
-        "A"
+      "answer": "Inelastic.\n$KE_{initial} = 1/2 (1.50\\times10^3 kg)(15.0 m/s)^2 = 1.69\\times10^5 J$\n$KE_{final} = 1/2 (1.50\\times10^3 kg)(5.00 m/s)^2 + 1/2 (1.00\\times10^3 kg)(15.0 m/s)^2 = 1.88\\times10^4 J + 1.13\\times10^5 J = 1.32\\times10^5 J$\nSince $KE_{initial} \\neq KE_{final}$, the collision is inelastic.",
+      "points": 3
+    },
+    {
+      "id": 64,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "Base your answers to questions 64 and 65 on the information below and on your knowledge of physics.\n\nA $3.0$-kilogram block, initially at rest, slides 2.5 meters down a frictionless incline at an angle of $20.^{\\circ}$ with the horizontal.\n\n64 Calculate the speed of the block at the bottom of the incline. [Show all work, including the equation and substitution with units.] [2]"
+        }
       ],
-      "answer": {
-        "value": 0.0819,
-        "unit": "A"
-      },
-      "sigFigs": 3,
+      "answer": "$PE_g = KE$\n$mgh = 1/2 mv^2$\n$v = \\sqrt{2gh}$\n$h = (2.5 m)(\\sin 20.^{\\circ}) = 0.855 m$\n$v = \\sqrt{2(9.81 m/s^2)(0.855 m)} = 4.1 m/s$",
       "points": 2
     },
     {
@@ -1634,54 +1516,58 @@
       "question": [
         {
           "type": "text",
-          "value": "65 Compare the power dissipated by the 110.-ohm resistor to the power dissipated by the 220.-ohm resistor."
+          "value": "65 State what happens to the total mechanical energy of the block as it slides down the incline. [1]"
         }
       ],
-      "answer": "The power dissipated by the 110-ohm resistor is greater than the power dissipated by the 220-ohm resistor.",
+      "answer": "Total mechanical energy remains constant.",
       "points": 1
     },
     {
       "id": 66,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "66\u201367 Calculate the horizontal component of the ball\u2019s initial velocity.\n[Show all work, including the equation and substitution with units.]"
-        },
-        {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-66-q.png",
-          "alt": "Question 66 image",
-          "height": "300px"
+          "value": "Base your answers to questions 66 through 68 on the information and diagram below and on your knowledge of physics.\n\nA light ray ($f=5.09\\times10^{14} Hz$) travels from water into flint glass.\nThe angle of incidence is $30.0^{\\circ}$, as shown in the diagram below.\n\n66 Calculate the wavelength of the light ray in water. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "units": [
-        "m/s"
+      "answer": "$v_w = c/n_w = (3.00\\times10^8 m/s) / 1.33 = 2.26\\times10^8 m/s$\n$\\lambda_w = v_w / f = (2.26\\times10^8 m/s) / (5.09\\times10^{14} Hz) = 4.44\\times10^{-7} m$",
+      "points": 2
+    },
+    {
+      "id": 67,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "67 Calculate the angle of refraction for the light ray in the flint glass. [Show all work, including the equation and substitution with units.] [2]"
+        }
       ],
-      "answer": {
-        "value": 2.5,
-        "unit": "m/s"
-      },
-      "sigFigs": 2,
+      "answer": "$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$\n$(1.33)(\\sin 30.0^{\\circ}) = (1.66)(\\sin\\theta_2)$\n$\\sin\\theta_2 = (1.33)(\\sin 30.0^{\\circ}) / 1.66 = 0.4009$\n$\\theta_2 = \\sin^{-1}(0.4009) = 23.6^{\\circ}$",
       "points": 2
     },
     {
       "id": 68,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "68\u201369 Calculate the vertical component of the ball\u2019s initial velocity.\n[Show all work, including the equation and substitution with units.]"
+          "value": "68 On the diagram in your answer booklet, draw the refracted light ray in the flint glass. [1]"
         }
       ],
-      "units": [
-        "m/s"
+      "answer": "Refracted ray drawn in flint glass at the calculated angle of refraction.",
+      "points": 1
+    },
+    {
+      "id": 69,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "Base your answers to questions 69 through 71 on the information and diagram below and on your knowledge of physics.\n\nA $2.0$-kilogram mass is attached to a vertical spring that has a spring constant of 100. newtons per meter.\nAn external force stretches the spring a distance of 0.20 meter from its equilibrium position.\n\n69 Calculate the magnitude of the force that stretches the spring. [Show all work, including the equation and substitution with units.] [2]"
+        }
       ],
-      "answer": {
-        "value": 6.3,
-        "unit": "m/s"
-      },
-      "sigFigs": 2,
+      "answer": "$F = kx = (100. N/m)(0.20 m) = 20. N$",
       "points": 2
     },
     {
@@ -1690,131 +1576,147 @@
       "question": [
         {
           "type": "text",
-          "value": "70 On the diagram in your answer booklet, draw an arrow originating at point P that represents the direction of the ball\u2019s acceleration at point P."
+          "value": "70 Calculate the elastic potential energy stored in the stretched spring. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "answer": "An arrow straight down from point P.",
-      "points": 1
+      "answer": "$PE_s = 1/2 kx^2 = 1/2 (100. N/m)(0.20 m)^2 = 2.0 J$",
+      "points": 2
     },
     {
       "id": 71,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "71 Determine the total amount of elastic potential energy stored in the spring when the spring is compressed 0.10 meter."
+          "value": "71 If the mass is vibrating on the vertical spring, as shown in the diagram below, determine the gravitational potential energy of the mass at its lowest point, with the equilibrium position as the zero reference point. [1]"
         },
         {
           "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-71-q.png",
-          "alt": "Question 71 image",
-          "height": "700px"
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-71-q.png",
+          "alt": "Diagram of a mass vibrating on a vertical spring."
         }
       ],
-      "units": [
-        "J"
-      ],
-      "answer": {
-        "value": 13,
-        "unit": "J"
-      },
-      "points": 1,
-      "sigFigs": 2
+      "answer": "$PE_g = mgh = (2.0 kg)(9.81 m/s^2)(-0.20 m) = -3.9 J$",
+      "points": 1
     },
     {
       "id": 72,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "72\u201373 Assuming all of the spring\u2019s energy is transferred to the 3.0-kilogram block, calculate the speed, v1, of the 3.0-kilogram block immediately after it is propelled by the spring.\n[Show all work, including the equation and substitution with units.]"
+          "value": "Base your answers to questions 72 through 75 on the information and diagram below and on your knowledge of physics.\n\nA spring is hung vertically from a support and a 0.25-kilogram mass is attached to the spring.\nThe spring stretches 0.050 meter from its equilibrium position, as shown in the diagram below.\n\n72 Determine the spring constant of the spring. [1]"
         }
       ],
-      "units": [
-        "m/s"
+      "answer": "$k = F/x = mg/x = (0.25 kg)(9.81 m/s^2) / 0.050 m = 49 N/m$",
+      "points": 1
+    },
+    {
+      "id": 73,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "73 When the 0.25-kilogram mass is pulled down an additional distance of 0.020 meter and released from rest, calculate the magnitude of the spring force exerted on the mass. [Show all work, including the equation and substitution with units.] [2]"
+        }
       ],
-      "answer": {
-        "value": 2.9,
-        "unit": "m/s"
-      },
-      "sigFigs": 2,
+      "answer": "$F_s = kx = (49 N/m)(0.020 m) = 0.98 N$",
       "points": 2
     },
     {
       "id": 74,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "74\u201375 Calculate the speed, v2, of the two blocks after the collision.\n[Show all work, including the equation and substitution with units.]"
+          "value": "74 Calculate the acceleration of the 0.25-kilogram mass when it is at the lowest point of its oscillation. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "units": [
-        "m/s"
-      ],
-      "answer": {
-        "value": 2.2,
-        "unit": "m/s"
-      },
-      "sigFigs": 2,
+      "answer": "$F_{net} = F_s - mg = ma$\n$ma = kx - mg$\n$a = (kx - mg) / m = ((49 N/m)(0.020 m) - (0.25 kg)(9.81 m/s^2)) / 0.25 kg = (0.98 N - 2.45 N) / 0.25 kg = -5.9 m/s^2$\nMagnitude is $5.9 m/s^2$",
       "points": 2
+    },
+    {
+      "id": 75,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "75 Determine the maximum speed of the oscillating mass. [1]"
+        }
+      ],
+      "answer": "Need total energy to find max speed. $E = KE_{max} + PE_{s, max} + PE_{g, max}$",
+      "points": 1
     },
     {
       "id": 76,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "76 Determine the energy of the emitted photon, in electronvolts."
+          "value": "Base your answers to questions 76 through 78 on the information and diagram below and on your knowledge of physics.\n\nA light ray travels from flint glass into air. The angle of incidence for the ray in the flint glass is $30.0^{\\circ}$, as shown in the diagram below.\n\n76 Calculate the angle of refraction for the light ray in the air. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "units": [
-        "eV"
-      ],
-      "answer": {
-        "value": 2.27,
-        "unit": "eV"
-      },
-      "points": 1,
-      "sigFigs": 3
+      "answer": "$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$\n$(1.66)(\\sin 30.0^{\\circ}) = (1.00)(\\sin\\theta_2)$\n$\\sin\\theta_2 = (1.66)(\\sin 30.0^{\\circ}) = 0.83$\n$\\theta_2 = \\sin^{-1}(0.83) = 56^{\\circ}$",
+      "points": 2
     },
     {
       "id": 77,
-      "type": "number",
+      "type": "multiple-choice",
       "question": [
         {
           "type": "text",
-          "value": "77 Determine the energy of the emitted photon, in joules."
+          "value": "77 The diagram below shows a light ray traveling from flint glass into air. The angle of incidence for the ray in the flint glass is $30.0^{\\circ}$, as shown in the diagram below."
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-77-q.png",
+          "alt": "Diagram of a light ray traveling from flint glass into air, showing angle of incidence."
+        },
+        {
+          "type": "text",
+          "value": "Which row in the chart below correctly describes the light ray as it travels from flint glass into air?"
         }
       ],
-      "units": [
-        "J"
+      "choices": [
+        {
+          "text": "(1)"
+        },
+        {
+          "text": "(2)"
+        },
+        {
+          "text": "(3)"
+        },
+        {
+          "text": "(4)"
+        }
       ],
-      "answer": {
-        "value": 3.63e-19,
-        "unit": "J"
-      },
-      "points": 1,
-      "sigFigs": 3
+      "answer": "(1)",
+      "points": 1
     },
     {
       "id": 78,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "78\u201379 Calculate the frequency of the emitted photon. [Show all work, including the equation and substitution with units.]"
+          "value": "78 On the diagram in your answer booklet, draw the refracted light ray in the air. [1]"
         }
       ],
-      "units": [
-        "Hz"
+      "answer": "Refracted ray drawn in air at the calculated angle of refraction.",
+      "points": 1
+    },
+    {
+      "id": 79,
+      "type": "short-answer",
+      "question": [
+        {
+          "type": "text",
+          "value": "Base your answers to questions 79 and 80 on the information below and on your knowledge of physics.\n\nA light ray travels from water into flint glass.\n79 State what happens to the speed of the light ray as the light ray passes into the flint glass from the water. [1]"
+        }
       ],
-      "answer": {
-        "value": 5.48e14,
-        "unit": "Hz"
-      },
-      "sigFigs": 3,
-      "points": 2
+      "answer": "Speed decreases.",
+      "points": 1
     },
     {
       "id": 80,
@@ -1822,57 +1724,57 @@
       "question": [
         {
           "type": "text",
-          "value": "80 Based on your calculated value of the frequency of the emitted photon, determine its classifi cation in the electromagnetic spectrum."
+          "value": "80 State what happens to the wavelength of the light ray as the light ray passes into the air from the flint glass. [1]"
         }
       ],
-      "answer": "Green or visible light",
+      "answer": "Wavelength increases.",
       "points": 1
     },
     {
       "id": 81,
-      "type": "number",
+      "type": "multiple-choice",
       "question": [
         {
           "type": "text",
-          "value": "81 Use a protractor to determine the angle of incidence of the light ray at point O."
+          "value": "Base your answers to questions 81 through 85 on the information, graph, and diagram below and on your knowledge of physics.\n\nA student pulls a block weighing 2.0 newtons, resting on a horizontal laboratory table, with a string and force sensor. The sensor measures the force applied to the block when the block is at rest and when the block is moving. The force applied to the block is plotted against time on the graph."
         },
         {
           "type": "image",
-          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-81-q.png",
-          "alt": "Question 81 image",
-          "height": "350px"
+          "url": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2023/phys-06-23-81-q.png",
+          "alt": "Graph of Force vs. Time for a block being pulled by a string and force sensor."
+        },
+        {
+          "type": "text",
+          "value": "Based on the graph, determine the force of kinetic friction acting on the block as it is pulled at constant velocity across the laboratory table."
         }
       ],
-      "units": [
-        "degrees",
-        "\u00b0"
+      "choices": [
+        {
+          "text": "(1) 0.5 N"
+        },
+        {
+          "text": "(2) 0.6 N"
+        },
+        {
+          "text": "(3) 0.7 N"
+        },
+        {
+          "text": "(4) 0.8 N"
+        }
       ],
-      "answer": {
-        "value": 28,
-        "unit": "degrees"
-      },
-      "tolerance": 2,
+      "answer": "(3) 0.7 N",
       "points": 1
     },
     {
       "id": 82,
-      "type": "number",
+      "type": "short-answer",
       "question": [
         {
           "type": "text",
-          "value": "82\u201383 Calculate the angle of refraction as the light ray leaves the fused quartz at point O and enters the air.\n[Show all work, including the equation and substitution with units.]"
+          "value": "82–83 Calculate the coefficient of kinetic friction between the block and the laboratory table. [Show all work, including the equation and substitution with units.] [2]"
         }
       ],
-      "units": [
-        "degrees",
-        "\u00b0"
-      ],
-      "answer": {
-        "value": 43.5,
-        "unit": "degrees"
-      },
-      "sigFigs": 2,
-      "tolerance": 0.5,
+      "answer": "$F_f = \\mu_k F_N$\n$\\mu_k = F_f / F_N = 0.7 N / 2.0 N = 0.35$",
       "points": 2
     },
     {
@@ -1881,13 +1783,10 @@
       "question": [
         {
           "type": "text",
-          "value": "84 Starting at point O and using a protractor and ruler, draw the refracted ray at the appropriate angle of refraction on the diagram in your answer booklet."
+          "value": "84 At the instant the block begins to move, what happens to the value of the coefficient of friction? [1]"
         }
       ],
-      "answer": {
-        "text": "Refracted ray at 43° ± 2° to the normal",
-        "imageUrl": "https://raw.githubusercontent.com/ACaringiJr/TakeRegents/refs/heads/main/images/physics_06-2022/phys-06-22-84-a.png"
-      },
+      "answer": "It decreases from static to kinetic friction.",
       "points": 1
     },
     {
@@ -1896,10 +1795,10 @@
       "question": [
         {
           "type": "text",
-          "value": "85 Compare the frequency of the light in fused quartz to the frequency of the light in air."
+          "value": "85 Identify the type of friction acting on the block at the instant it begins to move. [1]"
         }
       ],
-      "answer": "The frequency is the same in both media.",
+      "answer": "Static friction.",
       "points": 1
     }
   ]
